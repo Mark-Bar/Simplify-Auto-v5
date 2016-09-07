@@ -2,336 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73af0e9c-af97-4a29-af8d-1c0094c2ce06" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-25-45/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-29-49/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-33-58/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-42-13/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-44-58/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-47-41/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_02-00-48/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_03-17-20/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-09-28/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-13-44/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-14-34/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-48-26/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-53-33/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_08-27-53/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_09-17-04/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_09-35-16/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_09-35-46/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_09-44-48/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_10-47-52/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_10-57-56/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_10-59-20/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/TestingExcelReportGenerator.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/resources/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Core/BaseClass.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/DataColumn.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/DataRow.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/Enums$BrowserType.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/Enums$Environment.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/Enums$RelativePosition.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/Enums$ResultStatus.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/Enums.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/RetrievedTestValues.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/TestEntity.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/TestResult.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Reporting/ReportGenerator$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Reporting/ReportGenerator.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Reporting/TestReportEmailerUtility$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Reporting/TestReportEmailerUtility.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/PageObjects/Main_Object.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC1_class.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC2_class.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC3_class.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC4_class.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC5_class.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC7_class.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestMarshall.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/ApplicationConfig.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/CSVReportUtility.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/ConversionUtility.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/ExcelReaderUtility.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/GenerateID.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/IDGenerator/CheckSum.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/IDGenerator/ConstructID.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/IDGenerator/GenerateDOB.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/IDGenerator/GenerateGender.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/IDGenerator/GenerateRandBetween.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/OtpSmsUtility.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/SeleniumDriverUtility$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/SeleniumDriverUtility.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/SikuliDriverUtility$1.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/SikuliDriverUtility.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/classes/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/bullet_point.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/collapseall.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/failed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/navigator-bullet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/passed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/skipped.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire/surefirebooter3797768170516440838.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/KeywordDrivenTestFramework/Testing/TestClasses/TC1_Test.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/KeywordDrivenTestFramework/Testing/TestClasses/TC2_Test.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/KeywordDrivenTestFramework/Testing/TestClasses/TC3_Test.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/KeywordDrivenTestFramework/Testing/TestClasses/TC4_Test.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/KeywordDrivenTestFramework/Testing/TestClasses/TC5_Test.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/KeywordDrivenTestFramework/Testing/TestClasses/TC7_Test.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/TestPack.xlsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/TestSuites/MainTest.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/bullet_point.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/collapseall.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/failed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/navigator-bullet.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/passed.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/skipped.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_nodep_2_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_detro_phantomjsdriver_1_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_19_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_melloware_jintellitype_1_3_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_nativelibs4java_bridj_0_6_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sikulix_sikulixapi_1_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sikulix_sikulixlibswin_1_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_cli_commons_cli_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__info_cukes_cucumber_core_1_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__info_cukes_cucumber_html_0_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__info_cukes_cucumber_java8_1_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__info_cukes_cucumber_java_1_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__info_cukes_cucumber_jvm_deps_1_0_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__info_cukes_gherkin_2_12_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_5_2_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_mail_mail_1_4_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jxgrabkey_jxgrabkey_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_4_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_platform_4_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_platform_3_4_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_cssparser_cssparser_0_9_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_2_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_core_js_2_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_nekohtml_nekohtml_1_9_19.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_exec_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_3_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_3_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_schemas_3_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_2_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_8_1_12_v20130726.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_8_1_12_v20130726.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_8_1_12_v20130726.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_websocket_8_1_12_v20130726.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_2_52_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_2_41_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_2_41_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_htmlunit_driver_2_41_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_2_41_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_2_41_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_2_52_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_2_41_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_2_52_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_swinglabs_swing_layout_1_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_w3c_css_sac_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webbitserver_webbit_0_4_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_11_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_0_b2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CSVReports/KissatDashboard_MIP_Results.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CSVReports/KissatDashboard_MIP_ResultsErrorLog.csv" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-25-45/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-25-45/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-25-45/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-29-49/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-29-49/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-29-49/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-33-58/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-33-58/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-33-58/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-42-13/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-42-13/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-42-13/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-44-58/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-44-58/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-44-58/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-46-08/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-46-08/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-47-41/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-47-41/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_01-47-41/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_02-00-48/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_02-00-48/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_02-00-48/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_03-17-20/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_03-17-20/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_03-17-20/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_11-08-17/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_11-08-17/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-08-35/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-08-35/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-09-28/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-09-28/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-09-28/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-13-44/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-13-44/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-13-44/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-14-34/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-14-34/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-14-34/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-15-32/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-15-32/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-26-22/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-26-22/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-41-15/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-41-15/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-45-02/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-45-02/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-46-42/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-46-42/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-48-26/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-48-26/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-48-26/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-53-33/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-53-33/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-06_12-53-33/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_08-27-53/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_08-27-53/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_08-27-53/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_09-17-04/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_09-17-04/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_09-17-04/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_09-35-16/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_09-35-16/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_09-35-16/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_09-35-46/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_09-35-46/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_09-35-46/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_09-44-48/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_09-44-48/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_09-44-48/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_10-47-52/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_10-47-52/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_10-47-52/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_10-57-56/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_10-57-56/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_10-57-56/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_10-59-20/ErrorTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_10-59-20/InfoTestLog.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/KeywordDrivenTestReports/Test Pack_2016-09-07_10-59-20/Test Pack.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/RunId.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Spree-Final.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Core/BaseClass.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Entities/DataColumn.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Entities/DataRow.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Entities/Enums.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Entities/RetrievedTestValues.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Entities/TestEntity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Entities/TestResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Reporting/ReportGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Reporting/TestReportEmailerUtility.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/PageObjects/Main_Object.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC1_class.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC2_class.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC3_class.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC4_class.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC5_class.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC6_class.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC7_class.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestMarshall.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/ApplicationConfig.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/CSVReportUtility.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/ConversionUtility.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/ExcelReaderUtility.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/GenerateID.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/IDGenerator/CheckSum.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/IDGenerator/ConstructID.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/IDGenerator/GenerateDOB.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/IDGenerator/GenerateGender.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/IDGenerator/GenerateRandBetween.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/OtpSmsUtility.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/SeleniumDriverUtility.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/SikuliDriverUtility.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/KeywordDrivenTestFramework/Testing/TestClasses/TC1_Test.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/KeywordDrivenTestFramework/Testing/TestClasses/TC2_Test.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/KeywordDrivenTestFramework/Testing/TestClasses/TC3_Test.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/KeywordDrivenTestFramework/Testing/TestClasses/TC4_Test.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/KeywordDrivenTestFramework/Testing/TestClasses/TC5_Test.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/KeywordDrivenTestFramework/Testing/TestClasses/TC6_Test.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/KeywordDrivenTestFramework/Testing/TestClasses/TC7_Test.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/TestSuites/MainTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/Command line suite/Command line test.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/Command line suite/Command line test.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/Command line suite/testng-failed.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/jquery-1.7.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/Command line test.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/classes.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/groups.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/methods-alphabetical.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/methods-not-run.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/methods.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/reporter-output.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/testng.xml.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/toc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/old/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-failed.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-reports.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-reports.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire-reports/testng.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire/surefire2663735000989071582tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/surefire/surefire490168495039237006tmp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/Default Suite/Spree-Final.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/Default Suite/Spree-Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/Default Suite/testng-failed.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/emailable-report.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/jquery-1.7.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/junitreports/TEST-TestSuites.MainTest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/Default Suite/Spree-Final.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/Default Suite/classes.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/Default Suite/groups.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/Default Suite/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/Default Suite/main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/Default Suite/methods-alphabetical.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/Default Suite/methods-not-run.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/Default Suite/methods.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/Default Suite/reporter-output.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/Default Suite/testng.xml.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/Default Suite/toc.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/old/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/testng-failed.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/testng-reports.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/testng-reports.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/testng-results.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test-output/testng.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Spree-Final.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -470,8 +142,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1138,7 +810,7 @@
       <workItem from="1473065517159" duration="7140000" />
       <workItem from="1473136232219" duration="24736000" />
       <workItem from="1473236508328" duration="4120000" />
-      <workItem from="1473242036038" duration="159000" />
+      <workItem from="1473242036038" duration="299000" />
     </task>
     <servers />
   </component>
@@ -1175,7 +847,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36155000" />
+    <option name="totallyTimeSpent" value="36295000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-168" width="1936" height="1056" extended-state="6" />
@@ -1618,8 +1290,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
