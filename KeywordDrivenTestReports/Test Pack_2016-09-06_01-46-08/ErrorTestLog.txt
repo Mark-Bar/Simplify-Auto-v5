@@ -1,0 +1,4 @@
+Error navigating to URL - null
+[Error] Failed to click on element by Xpath - null
+[Error] could not take screenshot - KeywordDrivenTestReports\\Test Pack_2016-09-06_01-46-08\001 - AddItemToCart\001 - FAILED_1 - Failed to navigate to close newsletter.png - null
+[Error] could not take screenshot - KeywordDrivenTestReports\\Test Pack_2016-09-06_01-46-08\001 - ViewCart\001 - FAILED_1 - Failed to View cart.png - null

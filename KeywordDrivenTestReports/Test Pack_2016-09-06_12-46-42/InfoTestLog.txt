@@ -1,0 +1,10 @@
+Executing test - NavigateToSpree
+Continuing to next test method
+Executing test - AddItemToCart
+[INFO] Clicking element by Xpath : //*[@alt='X']
+[INFO] Waiting For Element by Xpath : //*[@alt='X']
+Continuing to next test method
+Executing test - ViewCart
+[INFO] Waiting For Element by Xpath : //*[@id='cart-header-flyout']/a/i
+Continuing to next test method
+Executing test - CheckoutProcess

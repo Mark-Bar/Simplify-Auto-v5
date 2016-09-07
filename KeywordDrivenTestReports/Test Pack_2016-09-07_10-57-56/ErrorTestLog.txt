@@ -1,0 +1,16 @@
+Error navigating to URL - null
+[Error] Failed to click on element by Xpath - null
+[Error] could not take screenshot - KeywordDrivenTestReports\\Test Pack_2016-09-07_10-57-56\001 - AddItemToCart\001 - FAILED_1 - Failed to navigate to close newsletter.png - null
+[Error] could not take screenshot - KeywordDrivenTestReports\\Test Pack_2016-09-07_10-57-56\001 - ViewCart\001 - FAILED_1 - Failed to View cart.png - null
+[Error] could not take screenshot - KeywordDrivenTestReports\\Test Pack_2016-09-07_10-57-56\001 - CheckoutProcess\001 - FAILED_1 - Failed to Checkout with Newly registered user.png - null
+[Error] could not take screenshot - KeywordDrivenTestReports\\Test Pack_2016-09-07_10-57-56\001 - SnapScan\001 - FAILED_1 - Failed to View cart.png - null
+[Error] could not take screenshot - KeywordDrivenTestReports\\Test Pack_2016-09-07_10-57-56\001 - ValidateOrder\001 - FAILED_1 - Failed to validate Order.png - null
+Error shutting down driver - null
+Error printing result - null
+Error printing result - null
+Error printing result - null
+Error printing result - null
+Error printing result - null
+Error printing result - null
+[Error] Failed to save HTML report to - HTMLTestReport.html - Error - The system cannot find the path specified
+[Error] could not send results email - Could not connect to SMTP host: localhost, port: 25

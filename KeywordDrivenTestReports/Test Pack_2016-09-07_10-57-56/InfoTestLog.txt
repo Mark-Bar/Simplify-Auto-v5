@@ -1,0 +1,19 @@
+Executing test - NavigateToSpree
+Continuing to next test method
+Executing test - AddItemToCart
+[INFO] Clicking element by Xpath : //*[@alt='X']
+[INFO] Waiting For Element by Xpath : //*[@alt='X']
+Continuing to next test method
+Executing test - ViewCart
+[INFO] Waiting For Element by Xpath : //*[@id='cart-header-flyout']/a/i
+Continuing to next test method
+Executing test - CheckoutProcess
+[INFO] Waiting For Element by Xpath : //*[text()='Checkout']
+Continuing to next test method
+Executing test - SnapScan
+[INFO] Waiting For Element by Xpath : //*[@id='menu']/ul/li/a[text()='NEW']
+Continuing to next test method
+Executing test - ValidateOrder
+[INFO] Waiting For Element by Xpath : //*[@class='icon-account']/../span
+Continuing to next test method
+No suitable driver found for jdbc:derby://localhost:1527/TestResults

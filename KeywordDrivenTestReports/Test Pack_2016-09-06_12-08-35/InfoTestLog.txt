@@ -1,0 +1,7 @@
+Executing test - NavigateToSpree
+
+===============================================
+Default Suite
+Total tests run: 1, Failures: 1, Skips: 0
+===============================================
+

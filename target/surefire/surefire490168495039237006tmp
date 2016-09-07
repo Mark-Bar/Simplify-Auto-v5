@@ -1,0 +1,7 @@
+#surefire
+#Wed Sep 07 09:54:51 CAT 2016
+maven.surefire.debug=true
+user.dir=C\:\\Users\\Brendan TestHeroes\\Desktop\\Spree-Final
+idea.version=2016.2.3
+localRepository=C\:\\Users\\Brendan TestHeroes\\.m2\\repository
+basedir=C\:\\Users\\Brendan TestHeroes\\Desktop\\Spree-Final
