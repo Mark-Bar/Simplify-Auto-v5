@@ -46,7 +46,7 @@ public class Main_Object extends BaseClass {
     }
 
     public static String CasualSneaker() {
-        return "//*[text()='Erke Tennis Shoes Pale Grey']";
+        return "//*[text()='Nike Recreation White']";
     }
 
     public static String SizeXpath() {

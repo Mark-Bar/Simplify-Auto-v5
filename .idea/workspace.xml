@@ -2,142 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73af0e9c-af97-4a29-af8d-1c0094c2ce06" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/testng.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cglib_cglib_nodep_2_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_detro_phantomjsdriver_1_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_5_2_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_platform_3_4_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_cssparser_cssparser_0_9_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_2_13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_core_js_2_13.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_nekohtml_nekohtml_1_9_19.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_8_1_12_v20130726.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_8_1_12_v20130726.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_8_1_12_v20130726.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_websocket_8_1_12_v20130726.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_api_2_52_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_chrome_driver_2_41_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_firefox_driver_2_41_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_htmlunit_driver_2_41_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_ie_driver_2_41_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_java_2_41_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_remote_driver_2_52_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_safari_driver_2_41_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_seleniumhq_selenium_selenium_support_2_52_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_w3c_css_sac_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_webbitserver_webbit_0_4_14.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_11_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/TestPack.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/KeywordDrivenTestFramework/Testing/TestClasses/TC1_Test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/KeywordDrivenTestFramework/Testing/TestClasses/TC2_Test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/KeywordDrivenTestFramework/Testing/TestClasses/TC3_Test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/KeywordDrivenTestFramework/Testing/TestClasses/TC4_Test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/KeywordDrivenTestFramework/Testing/TestClasses/TC5_Test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/KeywordDrivenTestFramework/Testing/TestClasses/TC6_Test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/KeywordDrivenTestFramework/Testing/TestClasses/TC7_Test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/Command line suite/Command line test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/Command line suite/Command line test.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/Command line suite/testng-failed.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/Command line test.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/classes.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/groups.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/main.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/methods-alphabetical.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/methods-not-run.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/methods.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/reporter-output.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/testng.xml.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire-reports/old/Command line suite/toc.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire/surefire2663735000989071582tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire/surefire490168495039237006tmp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/surefire/surefirebooter3797768170516440838.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/KeywordDrivenTestFramework/Testing/TestClasses/TC1_Test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/KeywordDrivenTestFramework/Testing/TestClasses/TC2_Test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/KeywordDrivenTestFramework/Testing/TestClasses/TC3_Test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/KeywordDrivenTestFramework/Testing/TestClasses/TC4_Test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/KeywordDrivenTestFramework/Testing/TestClasses/TC5_Test.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/KeywordDrivenTestFramework/Testing/TestClasses/TC7_Test.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/resources/TestPack.xlsx" afterPath="$PROJECT_DIR$/src/test/resources/TestPack.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Core/BaseClass.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Core/BaseClass.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/DataColumn.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/DataColumn.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/DataRow.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/DataRow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/Enums$BrowserType.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/Enums$BrowserType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/Enums$Environment.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/Enums$Environment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/Enums$RelativePosition.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/Enums$RelativePosition.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/Enums$ResultStatus.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/Enums$ResultStatus.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/Enums.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/Enums.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/RetrievedTestValues.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/RetrievedTestValues.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/TestEntity.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/TestEntity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/TestResult.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Entities/TestResult.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Reporting/ReportGenerator$1.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Reporting/ReportGenerator$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Reporting/ReportGenerator.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Reporting/ReportGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Reporting/TestReportEmailerUtility$1.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Reporting/TestReportEmailerUtility$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Reporting/TestReportEmailerUtility.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Reporting/TestReportEmailerUtility.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/PageObjects/Main_Object.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/PageObjects/Main_Object.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC1_class.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC1_class.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC2_class.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC2_class.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC3_class.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC3_class.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC4_class.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC4_class.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC5_class.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC5_class.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC7_class.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestClasses/TC7_class.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestMarshall.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Testing/TestMarshall.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/ApplicationConfig.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/ApplicationConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/CSVReportUtility.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/CSVReportUtility.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/ConversionUtility.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/ConversionUtility.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/ExcelReaderUtility.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/ExcelReaderUtility.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/GenerateID.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/GenerateID.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/IDGenerator/CheckSum.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/IDGenerator/CheckSum.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/IDGenerator/ConstructID.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/IDGenerator/ConstructID.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/IDGenerator/GenerateDOB.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/IDGenerator/GenerateDOB.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/IDGenerator/GenerateGender.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/IDGenerator/GenerateGender.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/IDGenerator/GenerateRandBetween.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/IDGenerator/GenerateRandBetween.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/OtpSmsUtility.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/OtpSmsUtility.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/SeleniumDriverUtility.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/SeleniumDriverUtility.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/SikuliDriverUtility$1.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/SikuliDriverUtility$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/SikuliDriverUtility.class" afterPath="$PROJECT_DIR$/target/classes/KeywordDrivenTestFramework/Utilities/SikuliDriverUtility.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/TestPack.xlsx" afterPath="$PROJECT_DIR$/target/classes/TestPack.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/TestPack.xlsx" afterPath="$PROJECT_DIR$/target/test-classes/TestPack.xlsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/TestSuites/MainTest.class" afterPath="$PROJECT_DIR$/target/test-classes/TestSuites/MainTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CSVReports/KissatDashboard_MIP_Results.csv" afterPath="$PROJECT_DIR$/CSVReports/KissatDashboard_MIP_Results.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Spree-Final.iml" afterPath="$PROJECT_DIR$/Spree-Final.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Core/BaseClass.java" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Core/BaseClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Entities/Enums.java" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Entities/Enums.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC1_class.java" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC1_class.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC2_class.java" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC2_class.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC3_class.java" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC3_class.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC4_class.java" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC4_class.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC5_class.java" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC5_class.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC6_class.java" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC6_class.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC7_class.java" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC7_class.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestMarshall.java" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestMarshall.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/ConversionUtility.java" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/ConversionUtility.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/SeleniumDriverUtility.java" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/SeleniumDriverUtility.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/SikuliDriverUtility.java" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/SikuliDriverUtility.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/TestSuites/MainTest.java" afterPath="$PROJECT_DIR$/src/test/java/TestSuites/MainTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-TestSuite.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" afterPath="$PROJECT_DIR$/target/surefire-reports/TestSuite.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" afterPath="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/index.html" afterPath="$PROJECT_DIR$/target/surefire-reports/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/old/index.html" afterPath="$PROJECT_DIR$/target/surefire-reports/old/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/testng-failed.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-failed.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/testng-results.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/PageObjects/Main_Object.java" afterPath="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/PageObjects/Main_Object.java" />
     </list>
     <ignored path="Spree-Final.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -160,11 +25,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="592">
               <caret line="110" column="12" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main_Object.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/PageObjects/Main_Object.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="48" column="49" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -326,6 +201,7 @@
         <option value="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/SeleniumDriverUtility.java" />
         <option value="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Utilities/SikuliDriverUtility.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/PageObjects/Main_Object.java" />
       </list>
     </option>
   </component>
@@ -490,6 +366,70 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Utilities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spree-Final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spree-Final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KeywordDrivenTestFramework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Testing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spree-Final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Spree-Final" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="KeywordDrivenTestFramework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Testing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PageObjects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1154,7 +1094,7 @@
       <workItem from="1473136232219" duration="24736000" />
       <workItem from="1473236508328" duration="4120000" />
       <workItem from="1473242036038" duration="1127000" />
-      <workItem from="1473305197961" duration="28021000" />
+      <workItem from="1473305197961" duration="28963000" />
     </task>
     <servers />
   </component>
@@ -1191,11 +1131,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65144000" />
+    <option name="totallyTimeSpent" value="66086000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1209,7 +1149,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1495,105 +1435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/PageObjects/Main_Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#427#428#0" expanded="false" />
-            <element signature="e#477#478#0" expanded="false" />
-            <element signature="e#698#699#0" expanded="false" />
-            <element signature="e#736#737#0" expanded="false" />
-            <element signature="e#785#786#0" expanded="false" />
-            <element signature="e#847#848#0" expanded="false" />
-            <element signature="e#897#898#0" expanded="false" />
-            <element signature="e#948#949#0" expanded="false" />
-            <element signature="e#1303#1304#0" expanded="false" />
-            <element signature="e#1350#1351#0" expanded="false" />
-            <element signature="e#1394#1395#0" expanded="false" />
-            <element signature="e#1460#1461#0" expanded="false" />
-            <element signature="e#1500#1501#0" expanded="false" />
-            <element signature="e#1540#1541#0" expanded="false" />
-            <element signature="e#1591#1592#0" expanded="false" />
-            <element signature="e#1641#1642#0" expanded="false" />
-            <element signature="e#1686#1687#0" expanded="false" />
-            <element signature="e#1747#1748#0" expanded="false" />
-            <element signature="e#1802#1803#0" expanded="false" />
-            <element signature="e#1860#1861#0" expanded="false" />
-            <element signature="e#1905#1906#0" expanded="false" />
-            <element signature="e#1968#1969#0" expanded="false" />
-            <element signature="e#2040#2041#0" expanded="false" />
-            <element signature="e#2107#2108#0" expanded="false" />
-            <element signature="e#2158#2159#0" expanded="false" />
-            <element signature="e#2225#2226#0" expanded="false" />
-            <element signature="e#2273#2274#0" expanded="false" />
-            <element signature="e#2330#2331#0" expanded="false" />
-            <element signature="e#2526#2527#0" expanded="false" />
-            <element signature="e#2594#2595#0" expanded="false" />
-            <element signature="e#2645#2646#0" expanded="false" />
-            <element signature="e#2696#2697#0" expanded="false" />
-            <element signature="e#2754#2755#0" expanded="false" />
-            <element signature="e#2809#2810#0" expanded="false" />
-            <element signature="e#2856#2857#0" expanded="false" />
-            <element signature="e#2939#2940#0" expanded="false" />
-            <element signature="e#2990#2991#0" expanded="false" />
-            <element signature="e#3043#3044#0" expanded="false" />
-            <element signature="e#3086#3087#0" expanded="false" />
-            <element signature="e#3145#3146#0" expanded="false" />
-            <element signature="e#3205#3206#0" expanded="false" />
-            <element signature="e#3252#3253#0" expanded="false" />
-            <element signature="e#3306#3307#0" expanded="false" />
-            <element signature="e#3365#3366#0" expanded="false" />
-            <element signature="e#3420#3421#0" expanded="false" />
-            <element signature="e#3493#3494#0" expanded="false" />
-            <element signature="e#3674#3675#0" expanded="false" />
-            <element signature="e#3717#3718#0" expanded="false" />
-            <element signature="e#3774#3775#0" expanded="false" />
-            <element signature="e#3846#3847#0" expanded="false" />
-            <element signature="e#3903#3904#0" expanded="false" />
-            <element signature="e#3966#3967#0" expanded="false" />
-            <element signature="e#4022#4023#0" expanded="false" />
-            <element signature="e#4082#4083#0" expanded="false" />
-            <element signature="e#4133#4134#0" expanded="false" />
-            <element signature="e#4189#4190#0" expanded="false" />
-            <element signature="e#4241#4242#0" expanded="false" />
-            <element signature="e#4317#4318#0" expanded="false" />
-            <element signature="e#4374#4375#0" expanded="false" />
-            <element signature="e#4450#4451#0" expanded="false" />
-            <element signature="e#4496#4497#0" expanded="false" />
-            <element signature="e#4546#4547#0" expanded="false" />
-            <element signature="e#4591#4592#0" expanded="false" />
-            <element signature="e#4640#4641#0" expanded="false" />
-            <element signature="e#4686#4687#0" expanded="false" />
-            <element signature="e#4742#4743#0" expanded="false" />
-            <element signature="e#4791#4792#0" expanded="false" />
-            <element signature="e#4845#4846#0" expanded="false" />
-            <element signature="e#5162#5163#0" expanded="false" />
-            <element signature="e#5210#5211#0" expanded="false" />
-            <element signature="e#5265#5266#0" expanded="false" />
-            <element signature="e#5342#5343#0" expanded="false" />
-            <element signature="e#5392#5393#0" expanded="false" />
-            <element signature="e#5469#5470#0" expanded="false" />
-            <element signature="e#5539#5540#0" expanded="false" />
-            <element signature="e#5584#5585#0" expanded="false" />
-            <element signature="e#5633#5634#0" expanded="false" />
-            <element signature="e#5687#5688#0" expanded="false" />
-            <element signature="e#5731#5732#0" expanded="false" />
-            <element signature="e#5788#5789#0" expanded="false" />
-            <element signature="e#5835#5836#0" expanded="false" />
-            <element signature="e#5879#5880#0" expanded="false" />
-            <element signature="e#5922#5923#0" expanded="false" />
-            <element signature="e#5974#5975#0" expanded="false" />
-            <element signature="e#6020#6021#0" expanded="false" />
-            <element signature="e#6075#6076#0" expanded="false" />
-            <element signature="e#6119#6120#0" expanded="false" />
-            <element signature="e#6166#6167#0" expanded="false" />
-            <element signature="e#6217#6218#0" expanded="false" />
-            <element signature="e#6271#6272#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/TestClasses/TC4_class.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="202">
@@ -1832,6 +1673,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="592">
           <caret line="110" column="12" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/KeywordDrivenTestFramework/Testing/PageObjects/Main_Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="48" column="49" selection-start-line="48" selection-start-column="49" selection-end-line="48" selection-end-column="49" />
           <folding />
         </state>
       </provider>
