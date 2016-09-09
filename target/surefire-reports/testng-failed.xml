@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="0" name="Failed suite [Command line suite]">
-  <test name="Command line test" preserve-order="false">
+<suite thread-count="1" verbose="0" name="Failed suite [Surefire suite]">
+  <test name="Surefire test">
     <classes>
-      <class name="KeywordDrivenTestFramework.Testing.TestClasses.TC1_Test"/>
-      <class name="KeywordDrivenTestFramework.Testing.TestClasses.TC2_Test"/>
-      <class name="KeywordDrivenTestFramework.Testing.TestClasses.TC3_Test"/>
-      <class name="KeywordDrivenTestFramework.Testing.TestClasses.TC4_Test"/>
-      <class name="KeywordDrivenTestFramework.Testing.TestClasses.TC5_Test"/>
-      <class name="KeywordDrivenTestFramework.Testing.TestClasses.TC7_Test"/>
+      <class name="BrowserStackTestNGTest"/>
       <class name="TestSuites.MainTest"/>
     </classes>
-  </test> <!-- Command line test -->
-</suite> <!-- Failed suite [Command line suite] -->
+  </test> <!-- Surefire test -->
+</suite> <!-- Failed suite [Surefire suite] -->

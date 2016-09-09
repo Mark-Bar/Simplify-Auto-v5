@@ -6,20 +6,15 @@
 package KeywordDrivenTestFramework.Testing.TestClasses;
 
 import KeywordDrivenTestFramework.Core.BaseClass;
-import static KeywordDrivenTestFramework.Core.BaseClass.SeleniumDriverInstance;
+
 import static KeywordDrivenTestFramework.Entities.Enums.ResultStatus.*;
 
-import KeywordDrivenTestFramework.Entities.Enums;
-import KeywordDrivenTestFramework.Entities.Enums.ResultStatus;
 import KeywordDrivenTestFramework.Entities.TestEntity;
 import KeywordDrivenTestFramework.Entities.TestResult;
 import KeywordDrivenTestFramework.Testing.PageObjects.Main_Object;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.List;
-import org.openqa.selenium.ie.InternetExplorerDriver;
 
 /**
  *

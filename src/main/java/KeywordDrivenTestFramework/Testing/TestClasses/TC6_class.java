@@ -3,7 +3,7 @@
 // * To change this template file, choose Tools | Templates
 // * and open the template in the editor.
 // */
-//package KeywordDrivenTestFramework.Testing.TestClasses;
+//package KeywordDrivenTestFramework.Testing.KeywordDrivenTestFramework.Testing.TestClasses;
 //
 //import KeywordDrivenTestFramework.Core.BaseClass;
 //import static KeywordDrivenTestFramework.Core.BaseClass.SeleniumDriverInstance;

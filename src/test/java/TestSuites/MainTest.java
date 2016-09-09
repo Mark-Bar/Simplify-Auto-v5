@@ -9,7 +9,7 @@ import KeywordDrivenTestFramework.Core.BaseClass;
 import KeywordDrivenTestFramework.Entities.Enums;
 import KeywordDrivenTestFramework.Testing.TestMarshall;
 import KeywordDrivenTestFramework.Utilities.ApplicationConfig;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 /**
  *

@@ -55,8 +55,6 @@ public class SikuliDriverUtility extends BaseClass
 
     }
     
-    //<editor-fold defaultstate="collapsed" desc="See Test Manual Scripts">
-    
     public boolean openSeeTest()
     {
         try

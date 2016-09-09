@@ -10,7 +10,6 @@ import KeywordDrivenTestFramework.Entities.Enums;
 import KeywordDrivenTestFramework.Entities.TestEntity;
 import KeywordDrivenTestFramework.Entities.TestResult;
 import KeywordDrivenTestFramework.Testing.PageObjects.Main_Object;
-import org.junit.Test;
 
 /**
  *
@@ -41,7 +40,7 @@ public class TC1_class extends BaseClass {
         if (!SeleniumDriverInstance.navigateTo(Main_Object.NavigateToSpreeUrl())) {
             return true;
         }
-        if (!browserType.equals(browserType.IE)) {
+        if (!browserType.equals(Enums.BrowserType.IE)) {
             //waite for news letter pop.
             if (!SeleniumDriverInstance.waitForElementByXpath(Main_Object.NewsletterImage())) {
                 return false;

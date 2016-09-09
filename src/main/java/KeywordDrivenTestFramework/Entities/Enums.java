@@ -10,7 +10,7 @@ package KeywordDrivenTestFramework.Entities;
 public class Enums
 {
     public enum BrowserType {
-        IE, FireFox, Chrome, Safari, Android, Phantom
+        IE, FireFox, Chrome, Safari
     }
     
     public enum ResultStatus

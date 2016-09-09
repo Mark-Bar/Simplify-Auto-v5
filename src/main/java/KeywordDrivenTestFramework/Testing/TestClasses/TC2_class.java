@@ -6,7 +6,6 @@
 package KeywordDrivenTestFramework.Testing.TestClasses;
 
 import KeywordDrivenTestFramework.Core.BaseClass;
-import static KeywordDrivenTestFramework.Core.BaseClass.SeleniumDriverInstance;
 import KeywordDrivenTestFramework.Entities.Enums;
 import KeywordDrivenTestFramework.Entities.TestEntity;
 import KeywordDrivenTestFramework.Entities.TestResult;
@@ -50,7 +49,7 @@ public class TC2_class extends BaseClass {
     }
 
     public boolean CloseNewLetter() {
-        if (!browserType.equals(browserType.IE)) {
+        if (!browserType.equals(Enums.BrowserType.IE)) {
             if (!SeleniumDriverInstance.clickElementbyXpath(Main_Object.CloseNewLetter())) {
                 return false;
             }

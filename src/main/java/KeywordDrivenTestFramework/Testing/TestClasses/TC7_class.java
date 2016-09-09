@@ -67,10 +67,7 @@ public class TC7_class extends BaseClass {
         if (!SeleniumDriverInstance.waitForElementByXpath(Main_Object.PlaceOrderNowXpath())) {
             return false;
         }
-        if (!SeleniumDriverInstance.clickElementbyXpath(Main_Object.PlaceOrderNowXpath())) {
-            return false;
-        }
+        return SeleniumDriverInstance.clickElementbyXpath(Main_Object.PlaceOrderNowXpath());
 
-        return true;
     }
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Regression Test" verbose="1" >
+    <test name="Regression suite" >
+        <classes>
+            <class name="TestSuites.MainTest"/>
+        </classes>
+    </test>
+</suite>

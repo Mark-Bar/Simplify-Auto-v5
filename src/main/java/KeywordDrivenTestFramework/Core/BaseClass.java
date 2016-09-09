@@ -44,7 +44,7 @@ public class BaseClass {
     public static String inputFilePath;
 
     public BaseClass() {
-        System.setProperty("java.awt.headless", "false");
+        System.setProperty("java.awt.headless", "true");
     }
 
     public void setStartTime() {

@@ -144,7 +144,7 @@ public class SeleniumDriverUtility extends BaseClass {
                 caps = chromecaps;
                 _isDriverRunning = true;
                 break;
-            case Safari: ;
+            case Safari:
                 DesiredCapabilities safaricaps = new DesiredCapabilities();
                 safaricaps.setCapability("browser", "Safari");
                 safaricaps.setCapability("browser_version", "9.1");
@@ -155,7 +155,7 @@ public class SeleniumDriverUtility extends BaseClass {
                 _isDriverRunning = true;
                 break;
         }
-        WebDriver driver = new RemoteWebDriver(new URL(URL), caps);
+        Driver = new RemoteWebDriver(new URL(URL), caps);
         retrievedTestValues = new RetrievedTestValues();
 
     }
@@ -2068,11 +2068,7 @@ public class SeleniumDriverUtility extends BaseClass {
             if (waitForElementByClassName(elementClassName)) {
                 WebElement elementToValidate = Driver.findElement(By.className(elementClassName));
                 String textDetected = elementToValidate.getText();
-                if (textDetected.contains(elementText)) {
-                    return true;
-                } else {
-                    return false;
-                }
+                return textDetected.contains(elementText);
             } else {
                 return false;
             }
@@ -2088,11 +2084,7 @@ public class SeleniumDriverUtility extends BaseClass {
             if (waitForElementById(elementId)) {
                 WebElement elementToValidate = Driver.findElement(By.id(elementId));
                 String textDetected = elementToValidate.getText();
-                if (textDetected.contains(elementText)) {
-                    return true;
-                } else {
-                    return false;
-                }
+                return textDetected.contains(elementText);
             } else {
                 return false;
             }
@@ -2108,11 +2100,7 @@ public class SeleniumDriverUtility extends BaseClass {
             if (waitForElementByXpath(elementXpath)) {
                 WebElement elementToValidate = Driver.findElement(By.xpath(elementXpath));
                 String textDetected = elementToValidate.getText();
-                if (textDetected.contains(elementText)) {
-                    return true;
-                } else {
-                    return false;
-                }
+                return textDetected.contains(elementText);
             } else {
                 return false;
             }
@@ -3765,11 +3753,7 @@ public class SeleniumDriverUtility extends BaseClass {
             System.err.println("Error waiting for element to be no longer present by Class  - " + e.getMessage());
             this.DriverExceptionDetail = e.getMessage();
         }
-        if (elementFound) {
-            return false;
-        } else {
-            return true;
-        }
+        return !elementFound;
     }
 
     public boolean specialWaitForElementByName(String elementName, String type) {
@@ -3795,11 +3779,7 @@ public class SeleniumDriverUtility extends BaseClass {
                             elementFound = false;
                         }
 
-                        if (type.equals(elementType)) {
-                            elementFound = true;
-                        } else {
-                            elementFound = false;
-                        }
+                        elementFound = type.equals(elementType);
                         break;
                     }
                 } catch (Exception e) {
@@ -4243,7 +4223,7 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             StringBuilder imageFilePathBuilder = new StringBuilder();
             // add date time folder and test case id folder
-            imageFilePathBuilder.append(this.reportDirectory).append("\\");
+            imageFilePathBuilder.append(reportDirectory).append("\\");
             imageFilePathBuilder.append(String.format("%03d", screenShotFolderCounter)).append(" - ");
             imageFilePathBuilder.append(testCaseId).append("\\");
             imageFilePathBuilder.append(String.format("%03d", screenShotCounter));
@@ -4275,7 +4255,7 @@ public class SeleniumDriverUtility extends BaseClass {
             try {
                 StringBuilder imageFilePathBuilder = new StringBuilder();
                 // add date time folder and test case id folder
-                imageFilePathBuilder.append(this.reportDirectory).append("\\");
+                imageFilePathBuilder.append(reportDirectory).append("\\");
                 imageFilePathBuilder.append(String.format("%03d", screenShotFolderCounter)).append(" - ");
                 imageFilePathBuilder.append(testCaseId).append("\\");
                 imageFilePathBuilder.append(String.format("%03d", screenShotCounter));
@@ -4400,7 +4380,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
     public void CloseChromeInstances() {
         try {
-            if (browserType.equals(browserType.Chrome)) {
+            if (browserType.equals(Enums.BrowserType.Chrome)) {
                 String TASKLIST = "tasklist";
                 String KILL = "taskkill /IM ";
                 String line;
@@ -4464,11 +4444,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
             WebElement DivList = Driver.findElement(By.id(containerId));
             List<WebElement> Elements = DivList.findElements(By.id(ElementID));
-            if (Elements.size() != 0) {
-                return true;
-            } else {
-                return false;
-            }
+            return Elements.size() != 0;
         } catch (Exception ex) {
             System.err.println("[ERROR] failed to find element : " + ex.getMessage());
             return false;
@@ -4481,11 +4457,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
             WebElement DivList = Driver.findElement(By.id(ElementID));
             List<WebElement> Elements = DivList.findElements(By.id(ElementID));
-            if (Elements.size() != 0) {
-                return true;
-            } else {
-                return false;
-            }
+            return Elements.size() != 0;
         } catch (Exception ex) {
             System.err.println("[ERROR] failed to find element : " + ex.getMessage());
             return false;
@@ -4498,11 +4470,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
             WebElement DivList = Driver.findElement(By.xpath(containerXpath));
             List<WebElement> Elements = DivList.findElements(By.className(ElementClassName));
-            if (Elements.size() != 0) {
-                return true;
-            } else {
-                return false;
-            }
+            return Elements.size() != 0;
         } catch (Exception ex) {
             System.err.println("[ERROR] failed to find element : " + ex.getMessage());
             return false;
@@ -4515,11 +4483,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
             WebElement DivList = Driver.findElement(By.name(ElementName));
             List<WebElement> Elements = DivList.findElements(By.className(ElementName));
-            if (Elements.size() != 0) {
-                return true;
-            } else {
-                return false;
-            }
+            return Elements.size() != 0;
         } catch (Exception ex) {
             System.err.println("[ERROR] failed to find element : " + ex.getMessage());
             return false;
@@ -4532,11 +4496,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
             WebElement DivList = Driver.findElement(By.id(containerId));
             List<WebElement> Elements = DivList.findElements(By.linkText(ElementLinkText));
-            if (Elements.size() != 0) {
-                return true;
-            } else {
-                return false;
-            }
+            return Elements.size() != 0;
         } catch (Exception ex) {
             System.err.println("[ERROR] failed to find element : " + ex.getMessage());
             return false;
@@ -4573,11 +4533,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
             WebElement DivList = Driver.findElement(By.id(containerId));
             List<WebElement> Elements = DivList.findElements(By.xpath(Xpath));
-            if (Elements.size() != 0) {
-                return true;
-            } else {
-                return false;
-            }
+            return Elements.size() != 0;
         } catch (Exception ex) {
             System.err.println("[ERROR] failed to find element : " + ex.getMessage());
             return false;
@@ -6269,11 +6225,7 @@ public class SeleniumDriverUtility extends BaseClass {
     public boolean checkIfGroupIsExpanded(String elementName) {
         try {
             WebElement element = Driver.findElement(By.name(elementName));
-            if (element.getAttribute("src").contains("/th/test/img/mnu/tv/minus.gif")) {
-                return true;
-            } else {
-                return false;
-            }
+            return element.getAttribute("src").contains("/th/test/img/mnu/tv/minus.gif");
 
         } catch (Exception ex) {
             System.err.println("[Error] Failed to find element by name: " + elementName + "' - " + ex.getMessage());
@@ -6334,11 +6286,7 @@ public class SeleniumDriverUtility extends BaseClass {
             WebElement table = Driver.findElement(By.id(tableId));
             try {
                 List<WebElement> accounts = table.findElements(By.className(rowClassName));
-                if (accounts.isEmpty()) {
-                    return false;
-                } else {
-                    return true;
-                }
+                return !accounts.isEmpty();
             } catch (Exception ex) {
                 System.err.println("[Error] Failed to find elements by class name: " + rowClassName + "' - " + ex.getMessage());
                 return false;
@@ -6774,7 +6722,7 @@ public class SeleniumDriverUtility extends BaseClass {
             int pages = 1;
             int numberOfPages = 1;
             List<String> reportData = new ArrayList<>();
-            if (browserType.equals(browserType.IE)) {
+            if (browserType.equals(Enums.BrowserType.IE)) {
                 numberOfPages = Integer.parseInt(_numberOfPages);
             } else {
                 waitForElementByXpath(_numberOfPages);
@@ -6878,7 +6826,7 @@ public class SeleniumDriverUtility extends BaseClass {
                 //move to next page
                 pages++;
                 if (pages <= numberOfPages) {
-                    if (browserType.equals(browserType.IE.IE)) {
+                    if (browserType.equals(Enums.BrowserType.IE)) {
                         this.doubleClickElementByXpath(nextPageXpath);
                     } else {
                         this.clickElementbyXpath(nextPageXpath);
@@ -7159,11 +7107,8 @@ public class SeleniumDriverUtility extends BaseClass {
             waitForElementByXpath(elementXpath, 60);
             WebElement element = Driver.findElement(By.xpath(elementXpath));
 
-            if (element.isDisplayed()) {
-                return true;
-            }
+            return element.isDisplayed();
 
-            return false;
         } catch (Exception e) {
             System.err.println("failed to find element by xpath - " + e.getMessage());
             this.DriverExceptionDetail = e.getMessage();
@@ -7863,7 +7808,7 @@ public class SeleniumDriverUtility extends BaseClass {
             while (pages <= numberOfPages) {
                 this.takeScreenShot("PassengersListPage" + pages, false);
                 reportData = new ArrayList<>();
-                waitForElementByXpath(elementXpath, 13000);;
+                waitForElementByXpath(elementXpath, 13000);
                 WebElement mainTable = Driver.findElement(By.xpath(elementXpath));
 
                 List<WebElement> tableRows = mainTable.findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
@@ -8243,11 +8188,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
             String disabled = mainDiv.getAttribute("disabled");
 
-            if (IsEnabled) {
-                return true;
-            } else {
-                return false;
-            }
+            return IsEnabled;
 
 //
 //            if (disabled == null || disabled.equals("true")) {
@@ -8268,11 +8209,7 @@ public class SeleniumDriverUtility extends BaseClass {
             waitForElementByXpath(elementXpath);
             boolean mainDiv = Driver.findElement(By.xpath(elementXpath)).isSelected();
 
-            if (mainDiv == true) {
-                return true;
-            } else {
-                return false;
-            }
+            return mainDiv == true;
         } catch (Exception e) {
             System.err.println("Error checking if element is selected - " + e.getMessage());
             this.DriverExceptionDetail = e.getMessage();
@@ -8291,11 +8228,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
             String disa = mainDiv.getAttribute("disabled");
 
-            if (disa == null || disa.equals("false")) {
-                IsDisabled = false;
-            } else {
-                IsDisabled = true;
-            }
+            IsDisabled = !(disa == null || disa.equals("false"));
 
             return IsDisabled;
 
@@ -8361,10 +8294,7 @@ public class SeleniumDriverUtility extends BaseClass {
             WebElement Dropdown = Driver.findElement(By.xpath(elementXpath));
 
             isRadio = Dropdown.getAttribute("type");
-            if (isRadio.equals("radio")) {
-                return true;
-            }
-            return false;
+            return isRadio.equals("radio");
 
         } catch (Exception e) {
             System.err.println("Error reading transaction from table - " + e.getMessage());
@@ -8692,7 +8622,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
             this.takeScreenShot("MessagesList", false);
             reportData = new ArrayList<>();
-            waitForElementByXpath(elementXpath, 13000);;
+            waitForElementByXpath(elementXpath, 13000);
             WebElement mainTable = Driver.findElement(By.xpath(elementXpath));
 
             List<WebElement> tableRows = mainTable.findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
@@ -9027,7 +8957,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
             this.takeScreenShot("TableList", false);
             reportData = new ArrayList<>();
-            waitForElementByXpath(elementXpath, 13000);;
+            waitForElementByXpath(elementXpath, 13000);
             WebElement mainTable = Driver.findElement(By.xpath(elementXpath));
 
             List<WebElement> tableRows = mainTable.findElement(By.tagName("tbody")).findElements(By.tagName("tr"));
@@ -10141,11 +10071,7 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             WebElement elementToClick = Driver.findElement(By.xpath(elementXpath));
 
-            if (elementToClick.isSelected()) {
-                return true;
-            } else {
-                return false;
-            }
+            return elementToClick.isSelected();
         } catch (Exception e) {
             System.err.println("Error checking if all checkboxes are checked - " + e.getMessage());
             this.DriverExceptionDetail = e.getMessage();
@@ -11397,11 +11323,8 @@ public class SeleniumDriverUtility extends BaseClass {
 
             propertyValue = Driver.findElement(By.xpath(elementXpath)).getAttribute("checked");
 
-            if (propertyValue.equalsIgnoreCase("true")) {
-                return false;
-            }
+            return !propertyValue.equalsIgnoreCase("true");
 
-            return true;
         } catch (Exception e) {
             System.err.println("Error checking if all checkboxes are checked - " + e.getMessage());
             this.DriverExceptionDetail = e.getMessage();
@@ -11420,11 +11343,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
             String disa = mainDiv.getAttribute("disabled");
 
-            if (disa == null || disa.equals("false")) {
-                IsDisabled = false;
-            } else {
-                IsDisabled = true;
-            }
+            IsDisabled = !(disa == null || disa.equals("false"));
 
             return IsDisabled;
 

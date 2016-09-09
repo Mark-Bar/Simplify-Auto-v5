@@ -6,17 +6,14 @@
 package KeywordDrivenTestFramework.Testing.TestClasses;
 
 import KeywordDrivenTestFramework.Core.BaseClass;
-import static KeywordDrivenTestFramework.Core.BaseClass.SeleniumDriverInstance;
 import KeywordDrivenTestFramework.Entities.Enums;
 
 import KeywordDrivenTestFramework.Testing.PageObjects.Main_Object;
 import KeywordDrivenTestFramework.Entities.TestEntity;
 import KeywordDrivenTestFramework.Entities.TestResult;
-import java.sql.Driver;
+
 import java.util.ArrayList;
 import java.util.List;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.interactions.Actions;
 
 /**
  *

@@ -6,7 +6,6 @@
 package KeywordDrivenTestFramework.Testing.TestClasses;
 
 import KeywordDrivenTestFramework.Core.BaseClass;
-import static KeywordDrivenTestFramework.Core.BaseClass.SeleniumDriverInstance;
 import KeywordDrivenTestFramework.Entities.Enums;
 import KeywordDrivenTestFramework.Entities.TestEntity;
 import KeywordDrivenTestFramework.Entities.TestResult;

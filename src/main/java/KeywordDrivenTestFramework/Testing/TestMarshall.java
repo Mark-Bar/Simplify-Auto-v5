@@ -14,6 +14,7 @@ import KeywordDrivenTestFramework.Utilities.ApplicationConfig;
 import KeywordDrivenTestFramework.Utilities.CSVReportUtility;
 import KeywordDrivenTestFramework.Utilities.ExcelReaderUtility;
 import KeywordDrivenTestFramework.Utilities.SeleniumDriverUtility;
+
 import java.io.*;
 import java.net.MalformedURLException;
 import java.text.SimpleDateFormat;
@@ -37,16 +38,6 @@ public class TestMarshall extends BaseClass {
     PrintStream infoOutputStream;
     private String dateTime;
 
-    public TestMarshall() {
-        inputFilePath = ApplicationConfig.InputFileName();
-        testDataList = new ArrayList<>();
-        excelInputReader = new ExcelReaderUtility();
-        browserType = ApplicationConfig.SelectedBrowser();
-        reportGenerator = new ReportGenerator(inputFilePath, ApplicationConfig.ReportFileDirectory());
-        SeleniumDriverInstance = new SeleniumDriverUtility(browserType);
-
-    }
-
     public TestMarshall(String inputFilePathIn, Enums.BrowserType browserTypeOverride) {
         inputFilePath = inputFilePathIn;
         testDataList = new ArrayList<>();
@@ -56,7 +47,6 @@ public class TestMarshall extends BaseClass {
         browserType = browserTypeOverride;
         reportGenerator = new ReportGenerator(inputFilePath, ApplicationConfig.ReportFileDirectory());
         SeleniumDriverInstance = new SeleniumDriverUtility(browserType);
-
     }
 
     public void runKeywordDrivenTests() throws Exception
