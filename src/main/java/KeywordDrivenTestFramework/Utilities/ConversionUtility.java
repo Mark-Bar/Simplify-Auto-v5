@@ -6,10 +6,12 @@
 
 package KeywordDrivenTestFramework.Utilities;
 
+import org.apache.commons.codec.binary.Base64;
+
 import java.io.File;
 import java.io.FileInputStream;
+
 import static java.lang.System.out;
-import org.apache.commons.codec.binary.Base64;
 /**
  *
  * @author Brendan

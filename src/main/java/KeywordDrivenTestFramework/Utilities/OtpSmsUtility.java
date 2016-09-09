@@ -6,9 +6,8 @@
 package KeywordDrivenTestFramework.Utilities;
 
 import KeywordDrivenTestFramework.Core.BaseClass;
-import static KeywordDrivenTestFramework.Core.BaseClass.SeleniumDriverInstance;
-import static KeywordDrivenTestFramework.Core.BaseClass.SikuliDriverInstance;
 import KeywordDrivenTestFramework.Entities.TestEntity;
+
 import java.util.ArrayList;
 import java.util.List;
 

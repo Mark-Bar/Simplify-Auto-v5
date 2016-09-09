@@ -5,23 +5,14 @@
 package KeywordDrivenTestFramework.Reporting;
 
 import KeywordDrivenTestFramework.Core.BaseClass;
-import KeywordDrivenTestFramework.Entities.DataColumn;
-import KeywordDrivenTestFramework.Entities.DataRow;
-import KeywordDrivenTestFramework.Entities.Enums;
-import static KeywordDrivenTestFramework.Entities.Enums.ResultStatus.FAIL;
-import static KeywordDrivenTestFramework.Entities.Enums.ResultStatus.PASS;
-import KeywordDrivenTestFramework.Entities.TestEntity;
-import KeywordDrivenTestFramework.Entities.TestResult;
+import KeywordDrivenTestFramework.Entities.*;
 import KeywordDrivenTestFramework.Utilities.CSVReportUtility;
 import KeywordDrivenTestFramework.Utilities.ExcelReaderUtility;
-import java.io.File;
-import java.io.FileNotFoundException;
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.PrintWriter;
-import static java.lang.System.err;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -30,8 +21,10 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import org.apache.commons.io.FileUtils;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import static KeywordDrivenTestFramework.Entities.Enums.ResultStatus.FAIL;
+import static KeywordDrivenTestFramework.Entities.Enums.ResultStatus.PASS;
+import static java.lang.System.err;
 
 /**
  *
@@ -64,11 +57,11 @@ public class ReportGenerator extends BaseClass {
     public ReportGenerator(String inputFilePath, String reportDirectory) {
         excelReader = new ExcelReaderUtility();
         _inputFilePath = inputFilePath;
-        // Retrieve inputFile Workbook
+        /* Retrieve inputFile Workbook */
         workbook = excelReader.getExcelWorkbook(_inputFilePath);
         setCellStyles();
         csvReportBuilder = new CSVReportUtility(_inputFilePath);
-//        this.reportDirectory = reportDirectory;
+        /* this.reportDirectory = reportDirectory; */
         this.testResults = new ArrayList<>();
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat dateFormatter = new SimpleDateFormat("(yyyy-MM-dd)(HH-mm-ss)");

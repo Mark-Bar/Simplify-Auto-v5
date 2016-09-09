@@ -10,27 +10,7 @@ import KeywordDrivenTestFramework.Entities.Enums.ResultStatus;
 import KeywordDrivenTestFramework.Entities.TestResult;
 import KeywordDrivenTestFramework.Utilities.ApplicationConfig;
 import KeywordDrivenTestFramework.Utilities.ConversionUtility;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
 
-import static KeywordDrivenTestFramework.Entities.Enums.ResultStatus.*;
-import static java.lang.System.err;
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.Timestamp;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.UUID;
 import javax.activation.DataHandler;
 import javax.activation.DataSource;
 import javax.activation.FileDataSource;
@@ -41,6 +21,15 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.sql.*;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+import static KeywordDrivenTestFramework.Entities.Enums.ResultStatus.*;
+import static java.lang.System.err;
 
 /**
  *

@@ -8,7 +8,6 @@ package TestSuites;
 import KeywordDrivenTestFramework.Core.BaseClass;
 import KeywordDrivenTestFramework.Entities.Enums;
 import KeywordDrivenTestFramework.Testing.TestMarshall;
-import KeywordDrivenTestFramework.Utilities.ApplicationConfig;
 import org.testng.annotations.Test;
 
 /**

@@ -7,30 +7,20 @@
 package KeywordDrivenTestFramework.Utilities;
 
 import KeywordDrivenTestFramework.Core.BaseClass;
-import static KeywordDrivenTestFramework.Core.BaseClass.testCaseId;
-import static KeywordDrivenTestFramework.Entities.Enums.RelativePosition.*;
+import KeywordDrivenTestFramework.Entities.Enums.RelativePosition;
+import org.apache.commons.io.FileUtils;
+import org.sikuli.basics.Settings;
+import org.sikuli.script.Button;
+import org.sikuli.script.*;
 
-import KeywordDrivenTestFramework.Entities.Enums;
-import java.awt.Toolkit;
-import java.awt.datatransfer.Clipboard;
-import java.awt.datatransfer.DataFlavor;
-import java.awt.datatransfer.StringSelection;
-import java.awt.datatransfer.Transferable;
-import java.awt.datatransfer.UnsupportedFlavorException;
+import java.awt.*;
+import java.awt.datatransfer.*;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import KeywordDrivenTestFramework.Entities.Enums.RelativePosition;
-import org.apache.commons.io.FileUtils;
-import org.sikuli.basics.Settings;
-import org.sikuli.script.Button;
-import org.sikuli.script.Key;
-import org.sikuli.script.Pattern;
-import org.sikuli.script.Region;
-import org.sikuli.script.Screen;
-import org.sikuli.script.ScreenImage;
+import static KeywordDrivenTestFramework.Entities.Enums.RelativePosition.Right;
 
 /**
  *
