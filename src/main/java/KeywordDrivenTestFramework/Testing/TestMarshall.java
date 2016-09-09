@@ -26,7 +26,7 @@ import java.util.logging.Logger;
 
 /**
  *
- * @author fnell
+ * @author Brendan
  */
 public class TestMarshall extends BaseClass {
 
@@ -154,14 +154,7 @@ public class TestMarshall extends BaseClass {
     }
     public static void EnsureOpenInstance() {
         try {
-            //        if (SeleniumDriverInstance.isDriverRunning()) {
-//            SeleniumDriverInstance.shutDown();
-//        }
-//        try {
-        SeleniumDriverInstance.startDriver();
-//        } catch (MalformedURLException ex) {
-//            Logger.getLogger(TestMarshall.class.getName()).log(Level.SEVERE, null, ex);
-//        }
+            SeleniumDriverInstance.startDriver();
         } catch (MalformedURLException ex) {
             Logger.getLogger(TestMarshall.class.getName()).log(Level.SEVERE, null, ex);
         }

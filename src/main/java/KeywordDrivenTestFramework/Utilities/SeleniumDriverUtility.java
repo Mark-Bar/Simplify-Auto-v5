@@ -53,7 +53,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  *
- * @author fnell
+ * @author Brendan
  */
 // Contains logic for handling accessor methods and driver calls.
 public class SeleniumDriverUtility extends BaseClass {

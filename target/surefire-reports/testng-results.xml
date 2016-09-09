@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="11453" started-at="2016-09-08T11:03:47Z" finished-at="2016-09-08T11:03:59Z">
+  <suite name="Surefire suite" duration-ms="382452" started-at="2016-09-09T04:44:25Z" finished-at="2016-09-09T04:50:47Z">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="11453" started-at="2016-09-08T11:03:47Z" finished-at="2016-09-08T11:03:59Z">
+    <test name="Surefire test" duration-ms="382452" started-at="2016-09-09T04:44:25Z" finished-at="2016-09-09T04:50:47Z">
       <class name="TestSuites.MainTest">
-        <test-method status="PASS" signature="RunSpree()[pri:0, instance:TestSuites.MainTest@13fcdbd]" name="RunSpree" duration-ms="11431" started-at="2016-09-08T13:03:47Z" finished-at="2016-09-08T13:03:59Z">
+        <test-method status="PASS" signature="RunSpree()[pri:0, instance:TestSuites.MainTest@180bc464]" name="RunSpree" duration-ms="382425" started-at="2016-09-09T06:44:25Z" finished-at="2016-09-09T06:50:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- RunSpree -->
