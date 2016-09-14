@@ -20,6 +20,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Parameters;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -146,7 +147,6 @@ public class SeleniumDriverUtility extends BaseClass {
         }
         Driver = new RemoteWebDriver(new URL(URL), caps);
         retrievedTestValues = new RetrievedTestValues();
-
     }
 
     public void maximizeWindow() {
@@ -214,25 +214,6 @@ public class SeleniumDriverUtility extends BaseClass {
             alert.getText();
             // And acknowledge the alert (equivalent to clicking "OK")
             alert.accept();
-            System.out.println("[Info]Ok Clicked successfully...proceeding");
-            return true;
-        } catch (Exception e) {
-            System.err.println("Error clicking OK in alert pop-up - " + e.getMessage());
-            this.DriverExceptionDetail = e.getMessage();
-            return false;
-        }
-    }
-
-    public boolean alertHandlerFirefox() {
-        try {
-            System.out.println("[Info]Attempting to click OK in alert pop-up");
-            // Get a handle to the open alert, prompt or confirmation
-            Alert alert = Driver.switchTo().alert();
-            // Get the text of the alert or prompt
-            alert.getText();
-            // And acknowledge the alert (equivalent to clicking "OK")
-            alert.accept();
-//            alert.sendKeys(testCaseId);
             System.out.println("[Info]Ok Clicked successfully...proceeding");
             return true;
         } catch (Exception e) {

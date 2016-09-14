@@ -12,7 +12,7 @@ public class Enums
     public enum BrowserType {
         IE, FireFox, Chrome, Safari
     }
-    
+
     public enum ResultStatus
     {
         PASS, FAIL, WARNING, UNCERTAIN

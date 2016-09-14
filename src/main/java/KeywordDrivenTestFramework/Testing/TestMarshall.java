@@ -53,8 +53,6 @@ public class TestMarshall extends BaseClass {
 
     public void runKeywordDrivenTests() throws Exception
     {
-
-
         testDataList = loadTestData(inputFilePath);
         this.generateReportDirectory();
         this.redirectOutputStreams();
@@ -73,7 +71,6 @@ public class TestMarshall extends BaseClass {
                     switch (testData.TestMethod)
                     {
                         // A login test starts with a fresh Driver instance
-
                         case "NavigateToSpree":
                         {
                             //ensureNewBrowserInstance();
@@ -112,7 +109,6 @@ public class TestMarshall extends BaseClass {
                             reportGenerator.addResult(navTest.executeTest());
                             break;
                         }
-
                     }
                     System.out.println("Continuing to next test method");
                 }

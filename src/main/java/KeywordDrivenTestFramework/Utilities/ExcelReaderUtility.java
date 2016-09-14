@@ -25,7 +25,7 @@ public class ExcelReaderUtility
     public ExcelReaderUtility()
     {
         testDataList = new ArrayList<>();
-        System.setProperty("java.awt.headless", "true"); 
+        System.setProperty("java.awt.headless", "true");
     }
     
     public List<TestEntity> getTestDataFromExcelFile(String filePath)

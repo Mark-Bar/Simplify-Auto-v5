@@ -14,6 +14,7 @@ import org.testng.annotations.Test;
  *
  * @author Abongile Bonga Maso
  */
+
 public class MainTest extends BaseClass{
 
     private static TestMarshall instance;
@@ -28,5 +29,4 @@ public class MainTest extends BaseClass{
         instance = new TestMarshall("C:\\Users\\Brendan TestHeroes\\Desktop\\Spree-Final\\src\\test\\resources\\TestPack.xlsx", Enums.BrowserType.Chrome);
         instance.runKeywordDrivenTests();
     }
-
 }
