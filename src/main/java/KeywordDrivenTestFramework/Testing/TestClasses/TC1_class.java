@@ -10,6 +10,7 @@ import KeywordDrivenTestFramework.Entities.Enums;
 import KeywordDrivenTestFramework.Entities.TestEntity;
 import KeywordDrivenTestFramework.Entities.TestResult;
 import KeywordDrivenTestFramework.Testing.PageObjects.Main_Object;
+import KeywordDrivenTestFramework.Utilities.SeleniumDriverUtility;
 
 /**
  *
@@ -38,6 +39,9 @@ public class TC1_class extends BaseClass {
     //navigate to spree
     public boolean OpenSpreeWebSite() {
         if (!SeleniumDriverInstance.navigateTo(Main_Object.NavigateToSpreeUrl())) {
+            return true;
+        }
+        if (SeleniumDriverUtility.Driver.getTitle().equals(Main_Object.PageTitle)) {
             return true;
         }
         if (!browserType.equals(Enums.BrowserType.IE)) {

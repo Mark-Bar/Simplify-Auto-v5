@@ -8,7 +8,10 @@ package TestSuites;
 import KeywordDrivenTestFramework.Core.BaseClass;
 import KeywordDrivenTestFramework.Entities.Enums;
 import KeywordDrivenTestFramework.Testing.TestMarshall;
+import org.openqa.selenium.remote.BrowserType;
 import org.testng.annotations.Test;
+
+import static KeywordDrivenTestFramework.Entities.Enums.BrowserType.Headless;
 
 /**
  *
@@ -26,7 +29,7 @@ public class MainTest extends BaseClass{
     @Test
     public void RunSpree() throws Exception {
         System.out.println("Spree Test Cases");
-        instance = new TestMarshall("C:\\Users\\Brendan TestHeroes\\Desktop\\Spree-Final\\src\\test\\resources\\TestPack.xlsx", Enums.BrowserType.Chrome);
+        instance = new TestMarshall("src\\test\\resources\\TestPack.xlsx", Enums.BrowserType.Chrome);
         instance.runKeywordDrivenTests();
     }
 }

@@ -13,14 +13,17 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.Point;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.phantomjs.PhantomJSDriver;
+import org.openqa.selenium.phantomjs.PhantomJSDriverService;
+import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Parameters;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -38,6 +41,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.List;
 
+import static KeywordDrivenTestFramework.Entities.Enums.BrowserType.Headless;
 import static java.lang.System.err;
 import static java.lang.System.out;
 
@@ -48,7 +52,7 @@ import static java.lang.System.out;
 // Contains logic for handling accessor methods and driver calls.
 public class SeleniumDriverUtility extends BaseClass {
 
-    public WebDriver Driver;
+    public static WebDriver Driver;
     public Enums.BrowserType browserType;
     private Boolean _isDriverRunning;
     public RetrievedTestValues retrievedTestValues;
@@ -94,10 +98,8 @@ public class SeleniumDriverUtility extends BaseClass {
             return true;
         } catch (Exception ex) {
             err.println("[ERROR] Failed to add cookies to browser session - " + ex.getMessage());
-
             return false;
         }
-
     }
 
     public void startDriver() throws MalformedURLException {
@@ -144,14 +146,27 @@ public class SeleniumDriverUtility extends BaseClass {
                 caps = safaricaps;
                 _isDriverRunning = true;
                 break;
+            case Headless:
+                DesiredCapabilities Headlesscaps = new DesiredCapabilities();
+                Headlesscaps.setCapability("takesScreenshot", true);
+                Headlesscaps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "src\\main\\resources\\phantomjs.exe");
+                Headlesscaps.setCapability("phantomjs.page.settings.userAgent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.60 Safari/537.17");
+                caps = Headlesscaps;
+                _isDriverRunning = true;
+                break;
         }
-        Driver = new RemoteWebDriver(new URL(URL), caps);
-        retrievedTestValues = new RetrievedTestValues();
+        if (browserType == Headless)
+        {
+            Driver = new PhantomJSDriver(caps);
+            retrievedTestValues = new RetrievedTestValues();
+        } else {
+            Driver = new RemoteWebDriver(new URL(URL), caps);
+            retrievedTestValues = new RetrievedTestValues();
+        }
     }
 
     public void maximizeWindow() {
         Driver.manage().window().maximize();
-
     }
 
     public boolean clickElementById(String elementId) {
@@ -159,7 +174,6 @@ public class SeleniumDriverUtility extends BaseClass {
 
             System.out.println("[Info]Attempting to click element by ID - " + elementId);
             waitForElementById(elementId);
-            //Pause is needed in some cases, do not remove
             SeleniumDriverInstance.pause(100);
             Driver.findElement(By.id(elementId)).click();
             System.out.println("[Info]Element clicked successfully...proceeding");
@@ -225,7 +239,6 @@ public class SeleniumDriverUtility extends BaseClass {
 
     public boolean clickElementByCSSSelector(String elementCSSSelector) {
         try {
-
             System.out.println("[Info]Attempting to click element by CSS Selector - " + elementCSSSelector);
             //Thread.sleep(1000);
             waitForElementByCSSSelector(elementCSSSelector);
@@ -244,7 +257,7 @@ public class SeleniumDriverUtility extends BaseClass {
             System.out.println("[Info]Attempting to Select Agent code - " + agentCode);
             //Thread.sleep(1000);
             waitForElementById(agentCode);
-            WebDriverWait wait = new WebDriverWait(Driver, ApplicationConfig.WaitTimeout());
+            WebDriverWait wait = new WebDriverWait(Driver, 15);
             wait.until(ExpectedConditions.elementToBeClickable(By.id(agentCode)));
             WebElement agentCodeRow = Driver.findElement(By.id(agentCode));
 
@@ -262,7 +275,7 @@ public class SeleniumDriverUtility extends BaseClass {
     public boolean switchToFrameById(String elementId) {
         int waitCount = 0;
         try {
-            while (waitCount < ApplicationConfig.WaitTimeout()) {
+            while (waitCount < 15) {
                 try {
                     Driver.switchTo().frame(elementId);
                     return true;
@@ -282,12 +295,11 @@ public class SeleniumDriverUtility extends BaseClass {
     public boolean switchToFrameByName(String elementName) {
         int waitCount = 0;
         try {
-            while (waitCount < ApplicationConfig.WaitTimeout()) {
+            while (waitCount < 15) {
                 try {
                     Driver.switchTo().frame(elementName);
                     return true;
                 } catch (Exception e) {
-                    //Thread.sleep(500);
                     waitCount++;
                 }
             }
@@ -303,14 +315,13 @@ public class SeleniumDriverUtility extends BaseClass {
         int waitCount = 0;
         try {
             this.switchToDefaultContent();
-            while (waitCount < ApplicationConfig.WaitTimeout()) {
+            while (waitCount < 15) {
                 try {
                     List<WebElement> iframes = Driver.findElements(By.id(elementId));
 
                     Driver.switchTo().frame((WebElement) iframes.toArray()[iframes.size() - 1]);
                     return true;
                 } catch (Exception e) {
-                    //Thread.sleep(500);
                     waitCount++;
                 }
             }
@@ -372,12 +383,10 @@ public class SeleniumDriverUtility extends BaseClass {
     public boolean moveToNewTab() {
         try {
             Robot robot = new Robot();
-
             robot.keyPress(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_TAB);
             robot.keyRelease(KeyEvent.VK_TAB);
             robot.keyRelease(KeyEvent.VK_CONTROL);
-
         } catch (Exception e) {
             System.err.println("Failed to close current tab - " + e.getMessage());
             this.DriverExceptionDetail = e.getMessage();
@@ -389,13 +398,11 @@ public class SeleniumDriverUtility extends BaseClass {
     public boolean selectAllText() {
         try {
             Robot robot = new Robot();
-
             robot.keyPress(KeyEvent.VK_CONTROL);
             robot.keyPress(KeyEvent.VK_A);
             pause(1500);
             robot.keyRelease(KeyEvent.VK_A);
             robot.keyRelease(KeyEvent.VK_CONTROL);
-
         } catch (Exception e) {
             System.err.println("Failed to close current tab - " + e.getMessage());
             this.DriverExceptionDetail = e.getMessage();
@@ -407,12 +414,10 @@ public class SeleniumDriverUtility extends BaseClass {
     public boolean closeWindowKeys() {
         try {
             Robot robot = new Robot();
-
             robot.keyPress(KeyEvent.VK_ALT);
             robot.keyPress(KeyEvent.VK_F4);
             robot.keyRelease(KeyEvent.VK_F4);
             robot.keyRelease(KeyEvent.VK_ALT);
-
         } catch (Exception e) {
             System.err.println("Failed to close current tab - " + e.getMessage());
             this.DriverExceptionDetail = e.getMessage();
@@ -463,7 +468,7 @@ public class SeleniumDriverUtility extends BaseClass {
     public boolean acceptAlertDialog() {
         int waitCount = 0;
         try {
-            while (waitCount < ApplicationConfig.WaitTimeout()) {
+            while (waitCount < 15) {
                 try {
                     Driver.switchTo().alert().accept();
                     return true;
@@ -538,7 +543,6 @@ public class SeleniumDriverUtility extends BaseClass {
 
     public String retrieveTextByCSS(String elementCSS) {
         String retrievedText = "";
-
         try {
             this.waitForElementByCSSSelector(elementCSS);
             WebElement elementToRead = Driver.findElement(By.cssSelector(elementCSS));
@@ -556,7 +560,7 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             SeleniumDriverInstance.waitForElementById(containerId);
 
-            WebElement DivList = SeleniumDriverInstance.Driver.findElement(By.id(containerId));
+            WebElement DivList = Driver.findElement(By.id(containerId));
 
             List<WebElement> subElements = DivList.findElements(By.tagName(tagName));
 
@@ -582,15 +586,11 @@ public class SeleniumDriverUtility extends BaseClass {
     public Boolean ClickEmbeddedListElementByTagNameUsingContainerId(String containerId, String tagName, String validationText) {
         try {
             SeleniumDriverInstance.waitForElementById(containerId);
-
-            WebElement DivList = SeleniumDriverInstance.Driver.findElement(By.id(containerId));
-
+            WebElement DivList = Driver.findElement(By.id(containerId));
             List<WebElement> subElements = DivList.findElements(By.tagName(tagName));
-
             for (WebElement subElement : subElements) {
                 this.pause(2000);
                 System.out.println("Detected entry " + subElement.getText() + "        Clickable");
-
                 if (subElement.getText().toUpperCase().trim().equals(validationText.toUpperCase().trim())) {
                     subElement.click();
                     System.out.println("Validation match  " + validationText + "       FOUND!!!");
@@ -609,7 +609,7 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             SeleniumDriverInstance.waitForElementByXpath(elementXpath);
 
-            WebElement elementToEnter = SeleniumDriverInstance.Driver.findElement(By.xpath(elementXpath));
+            WebElement elementToEnter = Driver.findElement(By.xpath(elementXpath));
             elementToEnter.findElement(By.xpath(elementXpath)).sendKeys(validationText);
             elementToEnter.sendKeys(Keys.TAB);
             System.out.println("ClickListElementByXpath complete");
@@ -623,15 +623,10 @@ public class SeleniumDriverUtility extends BaseClass {
     public Boolean ClickEmbeddedElementByIDUsingContainerId(String containerId, String ElementID) {
         try {
             SeleniumDriverInstance.waitForElementById(containerId);
-
             WebElement DivList = Driver.findElement(By.id(containerId));
-
             WebElement subElement = DivList.findElement(By.id(ElementID));
-
             System.out.println("Detected entry " + subElement.getText());
-
             subElement.click();
-
             return true;
         } catch (Exception ex) {
             System.err.println("[ERROR] failed to find element : " + ex.getMessage());
@@ -643,25 +638,17 @@ public class SeleniumDriverUtility extends BaseClass {
         String ChildElementText = "";
         try {
             SeleniumDriverInstance.waitForElementById(containerId);
-
             WebElement DivList = Driver.findElement(By.id(containerId));
-
             WebElement subElement = DivList.findElement(By.id(ElementID));
-
             System.out.println("Detected entry " + subElement.getText());
-
             subElement.click();
-
             List<WebElement> ChildElements = subElement.findElements(By.tagName(ChildTagName));
-
             for (WebElement ChildElement : ChildElements) {
                 ChildElementText = ChildElement.getText();
                 if (ChildElementText == null) {
                     continue;
                 }
-
                 System.out.println("Detected Child Element: " + ChildElementText);
-
                 if (ChildElementText.equals(validationText)) {
                     System.out.println("About to click child element: " + ChildElementText);
                     ChildElement.click();
@@ -683,19 +670,14 @@ public class SeleniumDriverUtility extends BaseClass {
             SeleniumDriverInstance.waitForElementById(containerId);
             WebElement Div = Driver.findElement(By.id(containerId));
             List<WebElement> ParentElements = Div.findElements(By.tagName(ParentTag));
-
             for (WebElement ParentElement : ParentElements) {
                 List<WebElement> ChildElements = ParentElement.findElements(By.tagName(ChildTag));
-
                 for (WebElement ChildElement : ChildElements) {
                     ChildElementText = ChildElement.findElement(By.tagName(ChildTag)).getText();
-
                     if (ChildElementText == null) {
                         continue;
                     }
-
                     System.out.println("Detected child element text :" + ChildElementText);
-
                     if (ChildElementText.equals(validationText)) {
                         System.out.println("About to click: " + ChildElementText);
                         ParentElement.click();
@@ -708,7 +690,6 @@ public class SeleniumDriverUtility extends BaseClass {
                         for (WebElement ListItem : ListItems) {
                             ListItemText = ListItem.getText();
                             System.out.println("Found ListElement: " + ListItemText);
-
                             if (ListItemText.equals(ItemText)) {
                                 ListItem.click();
                                 System.out.println("Clicking Item :" + ListItem.getText());
@@ -730,7 +711,6 @@ public class SeleniumDriverUtility extends BaseClass {
         String ChildElementText = "";
         try {
             SeleniumDriverInstance.waitForElementById(containerId);
-
             WebElement Div = Driver.findElement(By.id(containerId));
             System.out.println("Found element DIV: " + Div.getText());
             WebElement Table = Div.findElement(By.xpath(TableXpath));
@@ -750,11 +730,9 @@ public class SeleniumDriverUtility extends BaseClass {
                         WebElement LinkElement = ParentElement.findElement(By.tagName(LinkTag));
                         System.out.println("Found sub Element: " + LinkElement.getText());
                         LinkElement.click();
-
                         return true;
                     }
                 }
-
             }
             return true;
         } catch (Exception ex) {
@@ -795,14 +773,10 @@ public class SeleniumDriverUtility extends BaseClass {
     public Boolean validateTextForEmbeddedElementsByTagNameUsingContainerId(String containerId, String tagName, String validationText) {
         try {
             SeleniumDriverInstance.waitForElementById(containerId);
-
-            WebElement DivList = SeleniumDriverInstance.Driver.findElement(By.id(containerId));
-
+            WebElement DivList = Driver.findElement(By.id(containerId));
             List<WebElement> subElements = DivList.findElements(By.tagName(tagName));
-
             for (WebElement subElement : subElements) {
                 System.out.println("Detected entry " + subElement.getText());
-
                 if (subElement.getText().equals(validationText)) {
                     System.out.println("Validation match  " + validationText + "FOUND!!!");
                     return true;
@@ -818,7 +792,6 @@ public class SeleniumDriverUtility extends BaseClass {
     public Boolean ClickEmbeddedElementWithinSubElementByTagNameUsingContainerId(String containerId, String Xpath, String SubTagName, String EmbeddedTagName, String FindName, String validationText) {
         try {
             SeleniumDriverInstance.waitForElementById(containerId);
-
             WebElement div = Driver.findElement(By.id(containerId));
             System.out.println("Found div");
             WebElement table = div.findElement(By.xpath(Xpath));
@@ -829,14 +802,12 @@ public class SeleniumDriverUtility extends BaseClass {
             for (WebElement row : rows) {
                 System.out.println("Row - " + rowCount);
                 List<WebElement> cells = row.findElements(By.tagName(EmbeddedTagName));
-
                 if (cells == null || cells.size() < 1) {
                     continue;
                 }
                 String firstcell = cells.get(0).getText();
                 System.out.println(firstcell);
                 System.out.println("Checking if " + firstcell + " = " + FindName);
-
                 if (firstcell.toUpperCase().trim().equals(FindName.toUpperCase())) {
                     System.out.println(firstcell + "=" + FindName);
                     WebElement Button = row.findElement(By.linkText(validationText));
@@ -844,7 +815,6 @@ public class SeleniumDriverUtility extends BaseClass {
                     System.out.println("Button Clicked successfully - " + FindName + " = " + validationText);
                     return true;
                 }
-
                 rowCount++;
             }
             return true;
@@ -869,14 +839,12 @@ public class SeleniumDriverUtility extends BaseClass {
             for (WebElement row : rows) {
                 System.out.println("Row - " + rowCount);
                 List<WebElement> cells = row.findElements(By.tagName(EmbeddedTagName));
-
                 if (cells == null || cells.size() < 1) {
                     continue;
                 }
                 String firstcell = cells.get(0).getText();
                 System.out.println(firstcell);
                 System.out.println("Checking if " + firstcell + " = " + FindName);
-
                 if (firstcell.toUpperCase().trim().equals(FindName.toUpperCase())) {
                     System.out.println(firstcell + "=" + FindName);
                     List<WebElement> Buttons = row.findElements(By.tagName(ButtonTag));
@@ -903,7 +871,6 @@ public class SeleniumDriverUtility extends BaseClass {
         String ButtonText = "";
         try {
             SeleniumDriverInstance.waitForElementByXpath(ContainerXpath);
-
             WebElement div = Driver.findElement(By.xpath(ContainerXpath));
             System.out.println("Found Div");
             List<WebElement> Buttons = div.findElements(By.tagName(TagName));
@@ -927,7 +894,6 @@ public class SeleniumDriverUtility extends BaseClass {
     public Boolean ClickEmbeddedFilterItemWithinTableUsingContainerID(String containerId, String Xpath, String SubTagName, String EmbeddedTagName, int CellNumber, String FindName, String ButtonTag) {
         try {
             SeleniumDriverInstance.waitForElementById(containerId);
-
             WebElement div = Driver.findElement(By.id(containerId));
             System.out.println("Found div");
             WebElement table = div.findElement(By.xpath(Xpath));
@@ -935,12 +901,10 @@ public class SeleniumDriverUtility extends BaseClass {
             WebElement row = table.findElement(By.tagName(SubTagName));
             System.out.println("Found rows");
             List<WebElement> cells = row.findElements(By.tagName(EmbeddedTagName));
-
             for (WebElement cell : cells) {
                 String Neededcell = cells.get(CellNumber).getText();
                 System.out.println(Neededcell);
                 System.out.println("Checking if " + Neededcell + " = " + FindName);
-
                 if (Neededcell.toUpperCase().trim().equals(FindName.toUpperCase())) {
                     System.out.println(Neededcell + "=" + FindName);
                     WebElement Button = cell.findElement(By.xpath(ButtonTag));
@@ -960,7 +924,6 @@ public class SeleniumDriverUtility extends BaseClass {
     public Boolean ClickElementWithinTableByTagNameUsingContainerId(String containerId, String Xpath, String SubTagName, String EmbeddedTagName, int CellNumber) {
         try {
             SeleniumDriverInstance.waitForElementById(containerId);
-
             WebElement div = Driver.findElement(By.id(containerId));
             System.out.println("Found div");
             WebElement table = div.findElement(By.xpath(Xpath));
@@ -971,17 +934,14 @@ public class SeleniumDriverUtility extends BaseClass {
             for (WebElement row : rows) {
                 System.out.println("Row - " + rowCount);
                 List<WebElement> cells = row.findElements(By.tagName(EmbeddedTagName));
-
                 if (cells == null || cells.size() < 1) {
                     continue;
                 }
                 WebElement firstcell = cells.get(CellNumber);
                 System.out.println("Found Cells:" + cells.size());
-
                 firstcell.click();
                 System.out.println("Cell Clicked successfully");
                 return true;
-
             }
             return true;
         } catch (Exception ex) {
@@ -993,14 +953,10 @@ public class SeleniumDriverUtility extends BaseClass {
     public Boolean SelectValueFromEmbeddedElementByNameAndTagNameUsingContainerId(String containerId, String tagName, String validationText, String valueToSelect) {
         try {
             this.waitForElementById(containerId);
-
-            WebElement DivList = this.Driver.findElement(By.id(containerId));
-
+            WebElement DivList = Driver.findElement(By.id(containerId));
             List<WebElement> subElements = DivList.findElements(By.tagName(tagName));
-
             for (WebElement subElement : subElements) {
                 System.out.println("Detected entry " + subElement.getText());
-
                 if (subElement.getText().equals(validationText)) {
                     Select dropDownList = new Select(DivList.findElement(By.name(validationText)));
                     dropDownList.selectByVisibleText(valueToSelect);
@@ -1019,21 +975,16 @@ public class SeleniumDriverUtility extends BaseClass {
     public Boolean ClickEmbeddedParentElementByTagNameAndChildElementValidationTextUsingContainerXpath(String containerXpath, String tagName, String validationTagName, String validationText) {
         try {
             this.waitForElementByXpath(containerXpath);
-
-            WebElement Container = this.Driver.findElement(By.xpath(containerXpath));
+            WebElement Container = Driver.findElement(By.xpath(containerXpath));
             System.out.println("Detected entry " + Container.getText());
             List<WebElement> subElements = Container.findElements(By.tagName(tagName));
-
             for (WebElement subElement : subElements) {
                 System.out.println("Detected entry " + subElement.getText());
                 WebElement childElement = subElement.findElement(By.tagName(validationTagName));
-
                 if (childElement == null) {
                     continue;
                 }
-
                 System.out.println("Detected entry " + childElement.getText());
-
                 if (childElement.getText().equals(validationText)) {
                     subElement.click();
                     System.out.println("Validation match  " + validationText + "FOUND!!!");
@@ -1051,7 +1002,7 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             this.waitForElementByClassName(containerClassName);
 
-            List<WebElement> Containers = this.Driver.findElements(By.className(containerClassName));
+            List<WebElement> Containers = Driver.findElements(By.className(containerClassName));
 
             System.out.println("Detected " + Containers.size() + "container entries ");
 
@@ -1098,9 +1049,8 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             this.waitForElementById(containerId);
 
-            WebElement Div = this.Driver.findElement(By.id(containerId));
+            WebElement Div = Driver.findElement(By.id(containerId));
 
-            //WebElement subElement = Div.findElement(By.id(tagID));
             Select dropDownList = new Select(Div.findElement(By.name(validText)));
 
             dropDownList.selectByVisibleText(valueToSelect);
@@ -1117,9 +1067,8 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             this.waitForElementById(containerId);
 
-            WebElement Div = this.Driver.findElement(By.id(containerId));
+            WebElement Div = Driver.findElement(By.id(containerId));
 
-            //WebElement subElement = Div.findElement(By.id(tagID));
             Select dropDownList = new Select(Div.findElement(By.tagName(TagName)));
             System.out.println("[Found:] " + dropDownList.toString());
             dropDownList.selectByVisibleText(valueToSelect);
@@ -1136,9 +1085,8 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             this.waitForElementById(containerId);
 
-            WebElement Div = this.Driver.findElement(By.id(containerId));
+            WebElement Div = Driver.findElement(By.id(containerId));
 
-            //WebElement subElement = Div.findElement(By.id(tagID));
             Select dropDownList = new Select(Div.findElement(By.id(elementID)));
 
             dropDownList.selectByVisibleText(valueToSelect);
@@ -1153,7 +1101,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
     public Boolean ClickEmbeddedTableElementByNameUsingContainerXpath(String containerXpath, String elementTagName, String childSubElementTagName, int valueToSelect) {
         try {
-            WebElement table = SeleniumDriverInstance.Driver.findElement(By.xpath(containerXpath));
+            WebElement table = Driver.findElement(By.xpath(containerXpath));
             List<WebElement> rows = table.findElements(By.tagName(elementTagName));
             for (WebElement row : rows) {
                 List<WebElement> cells = row.findElements(By.tagName(childSubElementTagName));
@@ -1206,7 +1154,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
     public Boolean ClickEmbeddedTableElementByNameUsingContainerXpath(String containerXpath, String elementTagName, String childSubElementTagName, String valueToSelect) {
         try {
-            WebElement table = SeleniumDriverInstance.Driver.findElement(By.xpath(containerXpath));
+            WebElement table = Driver.findElement(By.xpath(containerXpath));
             List<WebElement> rows = table.findElements(By.tagName(elementTagName));
 
             for (WebElement row : rows) {
@@ -1215,7 +1163,6 @@ public class SeleniumDriverUtility extends BaseClass {
                 if (cells == null || cells.size() < 1) {
                     continue;
                 }
-//                WebElement cellToClick = cells.get(valueToSelect);
 
                 WebElement Button = Driver.findElement(By.xpath(valueToSelect));
                 Button.click();
@@ -1234,7 +1181,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
     public Boolean ClickDeleteButtonEmbeddedTableElementByNameUsingContainerXpath(String containerXpath, String elementTagName, String childSubElementTagName, String childTagElementName, String ButtonToClick) {
         try {
-            WebElement table = SeleniumDriverInstance.Driver.findElement(By.xpath(containerXpath));
+            WebElement table = Driver.findElement(By.xpath(containerXpath));
             List<WebElement> rows = table.findElements(By.tagName(elementTagName));
             for (WebElement row : rows) {
                 List<WebElement> cells = row.findElements(By.tagName(childSubElementTagName));
@@ -1247,7 +1194,6 @@ public class SeleniumDriverUtility extends BaseClass {
                 if (TagName == null || TagName.size() < 1) {
                     continue;
                 }
-//                WebElement cellToClick = cells.get(valueToSelect);
                 WebElement Button = Driver.findElement(By.xpath(ButtonToClick));
                 Button.click();
                 SeleniumDriverInstance.pause(2000);
@@ -1267,7 +1213,7 @@ public class SeleniumDriverUtility extends BaseClass {
         String FirstCellText = "";
         String CellText = "";
         try {
-            WebElement table = SeleniumDriverInstance.Driver.findElement(By.xpath(containerXpath));
+            WebElement table = Driver.findElement(By.xpath(containerXpath));
             List<WebElement> rows = table.findElements(By.tagName(elementTagName));
             System.out.println("Printing out rows :");
             for (WebElement row : rows) {
@@ -1307,7 +1253,7 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             this.waitForElementById(containerId);
 
-            WebElement Div = this.Driver.findElement(By.id(containerId));
+            WebElement Div = Driver.findElement(By.id(containerId));
 
             WebElement subElement = Div.findElement(By.id(tagID));
             //subElement.clear();
@@ -1330,7 +1276,7 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             this.waitForElementById(containerId);
 
-            WebElement Div = this.Driver.findElement(By.id(containerId));
+            WebElement Div = Driver.findElement(By.id(containerId));
 
             WebElement subElement = Div.findElement(By.id(tagID));
             subElement.clear();
@@ -1353,7 +1299,7 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             this.waitForElementById(containerId);
 
-            WebElement Div = this.Driver.findElement(By.id(containerId));
+            WebElement Div = Driver.findElement(By.id(containerId));
 
             //WebElement subElement = Div.findElement(By.id(tagID));
             Select dropDownList = new Select(Div.findElement(By.id(tagID)));
@@ -1372,7 +1318,7 @@ public class SeleniumDriverUtility extends BaseClass {
         System.out.println("valueToSelect: " + valueToSelect);
         try {
             this.waitForElementByXpath(divXpath);
-            WebElement div = this.Driver.findElement(By.xpath(divXpath));
+            WebElement div = Driver.findElement(By.xpath(divXpath));
             WebElement aTag = div.findElement(By.xpath(tagName1));
             System.out.println("a tag created");
             aTag.click();
@@ -1440,7 +1386,6 @@ public class SeleniumDriverUtility extends BaseClass {
         List<WebElement> rows;
         List<WebElement> columns;
 
-        System.out.println("Going inside the Try");
         try {
             dateWidget = Driver.findElement(By.xpath(pickerXpath));
             rows = dateWidget.findElements(By.tagName("tr"));
@@ -1748,7 +1693,6 @@ public class SeleniumDriverUtility extends BaseClass {
                 dropDownList.selectByIndex(indexToSelect);
                 return true;
             }
-            //waitForElementByName(elementName);
         } catch (Exception e) {
             System.err.println("[Error]Failed to select option from dropdownlist by index using Name - " + e.getMessage());
             this.DriverExceptionDetail = e.getMessage();
@@ -1941,7 +1885,7 @@ public class SeleniumDriverUtility extends BaseClass {
             boolean isEnabled = false;
             WebDriverWait wait = new WebDriverWait(Driver, 1);
 
-            while (!isEnabled && counter < ApplicationConfig.WaitTimeout()) {
+            while (!isEnabled && counter < 15) {
                 if (wait.until(ExpectedConditions.elementToBeClickable(By.id(elementID))) != null) {
                     isEnabled = true;
                     break;
@@ -1962,7 +1906,7 @@ public class SeleniumDriverUtility extends BaseClass {
             //Thread.sleep(2000);
             this.waitForElementById(elementId);
             this.waitUntilElementEnabledByID(elementId);
-            WebDriverWait wait = new WebDriverWait(Driver, ApplicationConfig.WaitTimeout());
+            WebDriverWait wait = new WebDriverWait(Driver, 15);
             wait.until(ExpectedConditions.elementToBeClickable(By.id(elementId)));
             WebElement checkBox = Driver.findElement(By.id(elementId));
             if (checkBox.isSelected() != mustBeSelected) {
@@ -1981,7 +1925,7 @@ public class SeleniumDriverUtility extends BaseClass {
             //Thread.sleep(2000);
             this.waitForElementById(elementName);
             this.waitUntilElementEnabledByID(elementName);
-            WebDriverWait wait = new WebDriverWait(Driver, ApplicationConfig.WaitTimeout());
+            WebDriverWait wait = new WebDriverWait(Driver, 15);
             wait.until(ExpectedConditions.elementToBeClickable(By.id(elementName)));
             WebElement checkBox = Driver.findElement(By.name(elementName));
             if (checkBox.isSelected() != mustBeSelected) {
@@ -2000,7 +1944,7 @@ public class SeleniumDriverUtility extends BaseClass {
             //Thread.sleep(2000);
             this.waitForElementByXpath(elementXpath);
             this.waitUntilElementEnabledByID(elementXpath);
-            WebDriverWait wait = new WebDriverWait(Driver, ApplicationConfig.WaitTimeout());
+            WebDriverWait wait = new WebDriverWait(Driver, 15);
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath(elementXpath)));
             WebElement checkBox = Driver.findElement(By.xpath(elementXpath));
             if (checkBox.isSelected() != mustBeSelected) {
@@ -2019,7 +1963,7 @@ public class SeleniumDriverUtility extends BaseClass {
             //Thread.sleep(2000);
             this.waitForElementById(elementId);
             this.waitUntilElementEnabledByID(elementId);
-            WebDriverWait wait = new WebDriverWait(Driver, ApplicationConfig.WaitTimeout());
+            WebDriverWait wait = new WebDriverWait(Driver, 15);
             wait.until(ExpectedConditions.elementToBeClickable(By.id(elementId)));
             WebElement checkBox = Driver.findElement(By.id(elementId));
             if (checkBox.isSelected() == mustBeSelected) {
@@ -2087,7 +2031,7 @@ public class SeleniumDriverUtility extends BaseClass {
             this.waitForElementById(elementId);
             int waitCount = 0;
             List<WebElement> optionsList;
-            while (waitCount < ApplicationConfig.WaitTimeout()) {
+            while (waitCount < 15) {
                 try {
                     Select dropDownList = new Select(Driver.findElement(By.id(elementId)));
                     optionsList = dropDownList.getOptions();
@@ -2112,7 +2056,7 @@ public class SeleniumDriverUtility extends BaseClass {
             this.waitForElementById(elementName);
             int waitCount = 0;
             List<WebElement> optionsList;
-            while (waitCount < ApplicationConfig.WaitTimeout()) {
+            while (waitCount < 15) {
                 try {
                     Select dropDownList = new Select(Driver.findElement(By.name(elementName)));
                     optionsList = dropDownList.getOptions();
@@ -2353,7 +2297,7 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             System.out.println("[INFO] Clicking element by Xpath : " + elementXpath);
             waitForElementByXpath(elementXpath);
-            WebDriverWait wait = new WebDriverWait(Driver, ApplicationConfig.WaitTimeout());
+            WebDriverWait wait = new WebDriverWait(Driver, 15);
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath(elementXpath)));
             WebElement elementToClick = Driver.findElement(By.xpath(elementXpath));
             elementToClick.click();
@@ -2867,15 +2811,11 @@ public class SeleniumDriverUtility extends BaseClass {
 
                                     out.println("[INFO] Found child and sibling in parent element, sibling text matched : " + span.getText() + " , expected : " + siblingInnerTagname);
                                     return true;
+                                    }
                                 }
                             }
-
                         }
-
-                    }
-
-                } catch (Exception ex) {
-
+                    } catch (Exception ex) {
                 }
             }
 
@@ -2933,7 +2873,6 @@ public class SeleniumDriverUtility extends BaseClass {
         List<String> values = new ArrayList<>();
 
         try {
-
             WebElement container = Driver.findElement(By.xpath(containerXpath));
 
             List<WebElement> divs = container.findElements(By.tagName("div"));
@@ -2957,7 +2896,6 @@ public class SeleniumDriverUtility extends BaseClass {
             this.DriverExceptionDetail = ex.getMessage();
             return false;
         }
-
     }
 
     public String getTextOfLastElementInList(String containerXpath) {
@@ -2972,9 +2910,8 @@ public class SeleniumDriverUtility extends BaseClass {
                 try {
                     if (div.getTagName().equals("div")) {
                         elementOfInterest = divs.get(i);
-                    }
-                } catch (Exception ex) {
-
+                        }
+                    } catch (Exception ex) {
                 }
                 i++;
             }
@@ -3010,7 +2947,6 @@ public class SeleniumDriverUtility extends BaseClass {
             WebElement elementToTypeIn = Driver.findElement(By.id(elementId));
             Actions clearText = new Actions(Driver);
             Actions typeText = new Actions(Driver);
-
             elementToTypeIn.click();
             clearText.sendKeys(Keys.DELETE);
             clearText.sendKeys(Keys.DELETE);
@@ -3097,7 +3033,7 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             Thread.sleep(5000);
 
-            List<String> reportData = new ArrayList<String>();
+            List<String> reportData = new ArrayList<>();
             WebElement element1 = Driver.findElement(By.xpath(elementXpath));
             List<WebElement> divRows = element1.findElements(By.tagName("span"));
 
@@ -3244,7 +3180,6 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             this.waitForElementByXpath(elementXpath);
             WebElement elementToTypeIn = Driver.findElement(By.xpath(elementXpath));
-//            elementToTypeIn.clear();
             Actions typeText = new Actions(Driver);
             typeText.moveToElement(elementToTypeIn);
             typeText.click(elementToTypeIn);
@@ -3284,7 +3219,6 @@ public class SeleniumDriverUtility extends BaseClass {
                 if (found) {
                     break;
                 }
-
                 counter++;
             }
 
@@ -3322,9 +3256,7 @@ public class SeleniumDriverUtility extends BaseClass {
                 }
                 counter++;
             }
-
             return counter;
-
         } catch (Exception e) {
             System.err.println("[Error] row number where a status is found inside a table - " + e.getMessage());
             this.DriverExceptionDetail = e.getMessage();
@@ -3350,9 +3282,7 @@ public class SeleniumDriverUtility extends BaseClass {
                 }
                 counter++;
             }
-
             return true;
-
         } catch (Exception e) {
             System.err.println("[Error] row number where a status is found inside a table - " + e.getMessage());
             this.DriverExceptionDetail = e.getMessage();
@@ -3363,7 +3293,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
     public boolean clearAndEnterTextByXpath(String elementXpath, String textToEnter) {
         try {
-//            this.waitForElementByXpath(elementXpath);
+            this.waitForElementByXpath(elementXpath);
             WebElement elementToTypeIn = Driver.findElement(By.xpath(elementXpath));
             elementToTypeIn.clear();
             Actions typeText = new Actions(Driver);
@@ -3375,7 +3305,6 @@ public class SeleniumDriverUtility extends BaseClass {
             typeText.sendKeys(elementToTypeIn, textToEnter);
             typeText.click(elementToTypeIn);
             typeText.perform();
-
             return true;
         } catch (Exception e) {
             System.err.println("Error entering text - " + elementXpath + " - " + e.getMessage());
@@ -3386,10 +3315,9 @@ public class SeleniumDriverUtility extends BaseClass {
 
     public boolean clearExistingTextByXpath(String elementXpath) {
         try {
-//            this.waitForElementByXpath(elementXpath);
+            this.waitForElementByXpath(elementXpath);
             WebElement elementToTypeIn = Driver.findElement(By.xpath(elementXpath));
             elementToTypeIn.clear();
-
             return true;
         } catch (Exception e) {
             System.err.println("Error entering text - " + elementXpath + " - " + e.getMessage());
@@ -3408,7 +3336,6 @@ public class SeleniumDriverUtility extends BaseClass {
             typeText.sendKeys(elementToTypeIn, textToEnter);
             typeText.click(elementToTypeIn);
             typeText.perform();
-
             return true;
         } catch (Exception e) {
             System.err.println("Error entering text - " + elementXpath + " - " + e.getMessage());
@@ -3422,7 +3349,6 @@ public class SeleniumDriverUtility extends BaseClass {
             this.waitForElementById(elementId);
             WebElement scrollElement = Driver.findElement(By.id(elementId));
             scrollElement.sendKeys(Keys.PAGE_DOWN);
-
             System.out.println("Sucessfully scrolled down...");
         } catch (Exception e) {
             System.err.println("Error scrolling page - " + e.getMessage());
@@ -3432,7 +3358,6 @@ public class SeleniumDriverUtility extends BaseClass {
 
     public boolean enterTextByName(String elementName, String textToEnter) {
         try {
-
             //Thread.sleep(500);
             this.waitForElementByName(elementName);
             WebElement elementToTypeIn = Driver.findElement(By.name(elementName));
@@ -3493,7 +3418,7 @@ public class SeleniumDriverUtility extends BaseClass {
         boolean elementFound = true;
         try {
             int waitCount = 0;
-            while (elementFound && waitCount < ApplicationConfig.WaitTimeout()) {
+            while (elementFound && waitCount < 15) {
                 try {
                     WebDriverWait wait = new WebDriverWait(Driver, 1);
                     if (wait.until(ExpectedConditions.presenceOfElementLocated(By.id(elementId))) == null) {
@@ -3519,7 +3444,7 @@ public class SeleniumDriverUtility extends BaseClass {
         boolean elementFound = false;
         try {
             int waitCount = 0;
-            while (!elementFound && waitCount < ApplicationConfig.WaitTimeout()) {
+            while (!elementFound && waitCount < 15) {
                 try {
                     WebDriverWait wait = new WebDriverWait(Driver, 1);
                     if (wait.until(ExpectedConditions.presenceOfElementLocated(By.id(elementId))) != null) {
@@ -3567,7 +3492,7 @@ public class SeleniumDriverUtility extends BaseClass {
         boolean elementFound = false;
         try {
             int waitCount = 0;
-            while (!elementFound && waitCount < ApplicationConfig.WaitTimeout()) {
+            while (!elementFound && waitCount < 15) {
                 try {
                     WebDriverWait wait = new WebDriverWait(Driver, 1);
                     if (wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(elementCSSSelector))) != null) {
@@ -3591,7 +3516,7 @@ public class SeleniumDriverUtility extends BaseClass {
         boolean elementFound = false;
         try {
             int waitCount = 0;
-            while (!elementFound && waitCount < ApplicationConfig.WaitTimeout()) {
+            while (!elementFound && waitCount < 15) {
                 try {
 
                     WebDriverWait wait = new WebDriverWait(Driver, 1);
@@ -3616,7 +3541,7 @@ public class SeleniumDriverUtility extends BaseClass {
         boolean elementFound = false;
         try {
             int waitCount = 0;
-            while (!elementFound && waitCount < ApplicationConfig.WaitTimeout()) {
+            while (!elementFound && waitCount < 15) {
                 try {
                     Driver.findElement(By.partialLinkText(elementPartialLinkText));
                     elementFound = true;
@@ -3638,7 +3563,7 @@ public class SeleniumDriverUtility extends BaseClass {
         boolean elementFound = false;
         try {
             int waitCount = 0;
-            while (!elementFound && waitCount < ApplicationConfig.WaitTimeout()) {
+            while (!elementFound && waitCount < 15) {
                 try {
                     WebDriverWait wait = new WebDriverWait(Driver, 1);
                     if (wait.until(ExpectedConditions.presenceOfElementLocated(By.className(elementClassName))) != null) {
@@ -3684,7 +3609,7 @@ public class SeleniumDriverUtility extends BaseClass {
         boolean elementFound = false;
         try {
             int waitCount = 0;
-            while (!elementFound && waitCount < ApplicationConfig.WaitTimeout()) {
+            while (!elementFound && waitCount < 15) {
                 try {
                     WebDriverWait wait = new WebDriverWait(Driver, 1);
                     if (wait.until(ExpectedConditions.presenceOfElementLocated(By.name(elementName))) != null) {
@@ -3731,7 +3656,7 @@ public class SeleniumDriverUtility extends BaseClass {
         String elementType = "";
         try {
             int waitCount = 0;
-            while (!elementFound && waitCount < ApplicationConfig.WaitTimeout()) {
+            while (!elementFound && waitCount < 15) {
                 try {
                     WebDriverWait wait = new WebDriverWait(Driver, 1);
                     if (wait.until(ExpectedConditions.presenceOfElementLocated(By.name(elementName))) != null) {
@@ -3801,7 +3726,6 @@ public class SeleniumDriverUtility extends BaseClass {
                             elementFound = false;
                             System.err.println("[Error] Element found but is not visible.");
                         }
-
                         break;
                     }
                 } catch (Exception e) {
@@ -3886,19 +3810,6 @@ public class SeleniumDriverUtility extends BaseClass {
         return propertyValue;
     }
 
-//     public String getSelectedDropdownOptionTextByXpath(String elementXpath) {
-//        try {
-//            waitForElementByXpath(elementXpath);
-//            Select dropDownList = new Select(Driver.findElement(By.xpath(elementXpath)));
-//            String selectedValue = dropDownList.getFirstSelectedOption().getText();
-//
-//            return selectedValue;
-//        } catch (Exception e) {
-//            System.err.println("[Error] Failed to retrieve selected dropdown option index using Id - " + e.getMessage());
-//            this.DriverExceptionDetail = e.getMessage();
-//            return null;
-//        }
-//    }
     public String retrieveValueByXpath(String elementXpath) {
         String retrievedText = "";
         try {
@@ -3922,7 +3833,7 @@ public class SeleniumDriverUtility extends BaseClass {
             isEnabled = false;
             WebDriverWait wait = new WebDriverWait(Driver, 2);
 
-            while (!isEnabled && counter < ApplicationConfig.WaitTimeout()) {
+            while (!isEnabled && counter < 15) {
                 if (wait.until(ExpectedConditions.elementToBeClickable(By.xpath(elementXpath))) != null) {
                     isEnabled = true;
                     break;
@@ -3943,7 +3854,7 @@ public class SeleniumDriverUtility extends BaseClass {
         boolean elementFound = false;
         try {
             int waitCount = 0;
-            while (!elementFound && waitCount < ApplicationConfig.WaitTimeout()) {
+            while (!elementFound && waitCount < 15) {
                 try {
                     WebDriverWait wait = new WebDriverWait(Driver, 1);
                     if (wait.until(ExpectedConditions.elementToBeClickable(By.xpath(elementXpath))) != null) {
@@ -4063,7 +3974,7 @@ public class SeleniumDriverUtility extends BaseClass {
         boolean elementFound = false;
         try {
             int waitCount = 0;
-            while (!elementFound && waitCount < ApplicationConfig.WaitTimeout()) {
+            while (!elementFound && waitCount < 15) {
                 try {
                     WebDriverWait wait = new WebDriverWait(Driver, 1);
                     if (wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(elementXpath))) != null) {
@@ -4170,7 +4081,6 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             Thread.sleep(milisecondsToWait);
         } catch (Exception e) {
-
         }
     }
 
@@ -4794,7 +4704,6 @@ public class SeleniumDriverUtility extends BaseClass {
                     return true;
                 }
             }
-
             return false;
         } catch (Exception ex) {
             System.err.println("[ERROR] failed to validate '" + optionTextToValidate + "' was the the map street dropdown - " + ex.getMessage());
@@ -5389,7 +5298,6 @@ public class SeleniumDriverUtility extends BaseClass {
 
     public boolean ClickByParentAndChildTagNameAndClassNamesFromInnerDIV(String ParentXpath, String ChildTagName, String InnerChildTagName, String InnerChildClassName) {
         try {
-
             this.pause(2000);
             List<WebElement> parents = Driver.findElements(By.xpath(ParentXpath));
             if (parents == null) {
@@ -5791,7 +5699,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
         try {
             System.out.println("Attempting to enable element - " + elementId);
-            JavascriptExecutor js = (JavascriptExecutor) SeleniumDriverInstance.Driver;
+            JavascriptExecutor js = (JavascriptExecutor) Driver;
             js.executeScript("document.getElementById('" + elementId + "').removeAttribute('disabled')");
             System.out.println("Element enabled successfully - " + elementId);
             WebElement select = Driver.findElement(By.id(elementId));
@@ -6782,14 +6690,6 @@ public class SeleniumDriverUtility extends BaseClass {
                                     reportData.add(rowData);
                                 }
                             }
-//                        for (int i = 0; i < rows.size(); i++) {
-//                            if (empty == false) {
-//                                String value = reportData.get(i) +"#"+rows.get(i).getText();
-//                                reportData.set(i, value);
-//                            }else{
-//                                reportData.add(rows.get(i).getText()); 
-//                            }
-//                        }
                         }
                     }
                 }
@@ -6904,7 +6804,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
     public boolean returnToPreviousTab(String previousTab) {
         try {
-            SeleniumDriverInstance.Driver.switchTo().window(previousTab);
+            Driver.switchTo().window(previousTab);
         } catch (Exception e) {
             System.err.println("Failed to return to previous tab - " + e.getMessage());
             this.DriverExceptionDetail = e.getMessage();
@@ -6918,7 +6818,7 @@ public class SeleniumDriverUtility extends BaseClass {
             System.out.println("[INFO] Clicking element by Xpath : " + elementXpath);
             waitForElementByXpath(elementXpath);
             WebElement elementToClick = Driver.findElement(By.xpath(elementXpath));
-            WebDriverWait wait = new WebDriverWait(Driver, ApplicationConfig.WaitTimeout());
+            WebDriverWait wait = new WebDriverWait(Driver, 15);
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(elementXpath)));
             wait.until(ExpectedConditions.elementToBeClickable(elementToClick));
             //wait.until(ExpectedConditions.invisibilityOfElementLocated(elementToClick));
@@ -7152,7 +7052,7 @@ public class SeleniumDriverUtility extends BaseClass {
         boolean elementFound = false;
         try {
             int waitCount = 0;
-            while (!elementFound && waitCount < ApplicationConfig.WaitTimeout()) {
+            while (!elementFound && waitCount < 15) {
                 try {
                     WebDriverWait wait = new WebDriverWait(Driver, 1);
                     if (wait.until(ExpectedConditions.elementToBeClickable(By.xpath(elementXpath))) != null) {
@@ -7175,7 +7075,7 @@ public class SeleniumDriverUtility extends BaseClass {
         boolean elementFound = false;
         try {
             int waitCount = 0;
-            while (!elementFound && waitCount < ApplicationConfig.WaitTimeout()) {
+            while (!elementFound && waitCount < 15) {
                 try {
                     WebDriverWait wait = new WebDriverWait(Driver, 1);
                     if (wait.until(ExpectedConditions.elementToBeClickable(By.xpath(elementXpath))) != null) {
@@ -7198,7 +7098,7 @@ public class SeleniumDriverUtility extends BaseClass {
         boolean elementFound = false;
         try {
             int waitCount = 0;
-            while (!elementFound && waitCount < ApplicationConfig.WaitTimeout()) {
+            while (!elementFound && waitCount < 15) {
                 try {
                     WebDriverWait wait = new WebDriverWait(Driver, 1);
                     if (wait.until(ExpectedConditions.elementToBeClickable(element)) != null) {
@@ -7522,7 +7422,6 @@ public class SeleniumDriverUtility extends BaseClass {
 
             return gridData;
         }
-
     }
 
     public String retrievetextFromDropdownByXpath1(String elementXpath) {
@@ -8160,13 +8059,6 @@ public class SeleniumDriverUtility extends BaseClass {
 
             return IsEnabled;
 
-//
-//            if (disabled == null || disabled.equals("true")) {
-//                IsEnabled = true;
-//            } else {
-//                IsEnabled = false;
-//            }
-//            return IsEnabled;
         } catch (Exception e) {
             System.err.println("Error checking if element is enabled - " + e.getMessage());
             this.DriverExceptionDetail = e.getMessage();
@@ -8973,7 +8865,7 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             System.out.println("[INFO] Clicking element in list by Xpath : " + elementXpath);
             waitForElementByXpath(elementXpath);
-            WebDriverWait wait = new WebDriverWait(Driver, ApplicationConfig.WaitTimeout());
+            WebDriverWait wait = new WebDriverWait(Driver, 15);
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath(elementXpath)));
             List<WebElement> elementToClick = Driver.findElements(By.xpath(elementXpath));
             elementToClick.get(elementNum).click();
@@ -8990,7 +8882,7 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             System.out.println("[INFO] Clicking element and returning in list by Xpath : " + elementXpath);
             waitForElementByXpath(elementXpath);
-            WebDriverWait wait = new WebDriverWait(Driver, ApplicationConfig.WaitTimeout());
+            WebDriverWait wait = new WebDriverWait(Driver, 15);
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath(elementXpath)));
             List<WebElement> elementToClick = Driver.findElements(By.xpath(elementXpath));
             elementToClick.get(elementNum).click();
@@ -9916,12 +9808,12 @@ public class SeleniumDriverUtility extends BaseClass {
 
     public String SwitchToNewWindow() {
         // get the current window handle
-        String parentHandle = SeleniumDriverInstance.Driver.getWindowHandle();
-        while (parentHandle.equalsIgnoreCase(SeleniumDriverInstance.Driver.getWindowHandle())) {
-            for (String winHandle : SeleniumDriverInstance.Driver.getWindowHandles()) {
+        String parentHandle = Driver.getWindowHandle();
+        while (parentHandle.equalsIgnoreCase(Driver.getWindowHandle())) {
+            for (String winHandle : Driver.getWindowHandles()) {
 
                 // switch focus of WebDriver to the next found window handle (that's your newly opened window)
-                SeleniumDriverInstance.Driver.switchTo().window(winHandle);
+                Driver.switchTo().window(winHandle);
             }
 
         }
@@ -9932,8 +9824,8 @@ public class SeleniumDriverUtility extends BaseClass {
     public void SwitchToOriginalWindow(String parentHandle) {
         parentHandle = SwitchToNewWindow();
 
-        SeleniumDriverInstance.Driver.close(); // close newly opened window when done with it
-        SeleniumDriverInstance.Driver.switchTo().window(parentHandle); // switch back to the original window
+        Driver.close(); // close newly opened window when done with it
+        Driver.switchTo().window(parentHandle); // switch back to the original window
         //String winHandleBefore = SeleniumDriverInstance.Driver.getWindowHandle();
 
         // Switch back to original browser (first window)
@@ -10243,7 +10135,7 @@ public class SeleniumDriverUtility extends BaseClass {
 
     public void SwitchToOriginalWindowNoClose(String parentHandle) {
 
-        SeleniumDriverInstance.Driver.switchTo().window(parentHandle);
+        Driver.switchTo().window(parentHandle);
 
     }
 
@@ -10519,7 +10411,7 @@ public class SeleniumDriverUtility extends BaseClass {
     public WebElement GetParentElementByXpath(String elementXpath, int numberOfLevelsToGoUp) {
         try {
 
-            WebElement startingElement = SeleniumDriverInstance.Driver.findElement(By.xpath(elementXpath));
+            WebElement startingElement = Driver.findElement(By.xpath(elementXpath));
             WebElement currentParent;
             WebElement newParent;
 
@@ -10749,7 +10641,7 @@ public class SeleniumDriverUtility extends BaseClass {
     // @gjansen
     public boolean switchToIframeByXpath(String elementXpath) {
         try {
-            SeleniumDriverInstance.Driver.switchTo().frame(SeleniumDriverInstance.Driver.findElement(By.xpath(elementXpath)));
+            Driver.switchTo().frame(Driver.findElement(By.xpath(elementXpath)));
         } catch (Exception e) {
             System.out.println("Failed To Switch To Iframe");
             return false;
@@ -10804,8 +10696,8 @@ public class SeleniumDriverUtility extends BaseClass {
     public boolean ClickAndHold(String XPath) {
         try {
             By by = By.xpath(XPath);
-            Actions action = new Actions(SeleniumDriverInstance.Driver);
-            WebElement elem = SeleniumDriverInstance.Driver.findElement(by);
+            Actions action = new Actions(Driver);
+            WebElement elem = Driver.findElement(by);
             action.clickAndHold(elem).build().perform();
             this.sleep(4);
         } catch (Exception E) {
@@ -10822,8 +10714,8 @@ public class SeleniumDriverUtility extends BaseClass {
         //you need to release the control from the test
         try {
             By by = By.xpath(XPath);
-            Actions actions = new Actions(SeleniumDriverInstance.Driver);
-            WebElement elem = SeleniumDriverInstance.Driver.findElement(by);
+            Actions actions = new Actions(Driver);
+            WebElement elem = Driver.findElement(by);
             actions.moveToElement(elem);
             actions.release().build().perform();
         } catch (Exception E) {
@@ -11052,7 +10944,7 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             System.out.println("[INFO] Clicking element by Xpath : " + elementXpath);
             waitForElementByXpath(elementXpath);
-            WebDriverWait wait = new WebDriverWait(Driver, ApplicationConfig.WaitTimeout());
+            WebDriverWait wait = new WebDriverWait(Driver, 15);
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath(elementXpath)));
             WebElement elementToClick = Driver.findElement(By.xpath(elementXpath));
             elementToClick.click();
@@ -11104,7 +10996,7 @@ public class SeleniumDriverUtility extends BaseClass {
         boolean elementFound = false;
         try {
             int waitCount = 0;
-            while (!elementFound && waitCount < ApplicationConfig.WaitTimeout()) {
+            while (!elementFound && waitCount < 15) {
                 try {
                     WebDriverWait wait = new WebDriverWait(Driver, 1);
                     if (wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath(elementXpath))) != null) {
@@ -11198,7 +11090,7 @@ public class SeleniumDriverUtility extends BaseClass {
         boolean elementFound = false;
         try {
             int waitCount = 0;
-            while (!elementFound && waitCount < ApplicationConfig.WaitTimeout()) {
+            while (!elementFound && waitCount < 15) {
                 try {
                     WebDriverWait wait = new WebDriverWait(Driver, 1);
                     if (wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(elementXpath))) != null) {

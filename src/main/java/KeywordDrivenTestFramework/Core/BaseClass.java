@@ -7,10 +7,7 @@ package KeywordDrivenTestFramework.Core;
 import KeywordDrivenTestFramework.Entities.Enums;
 import KeywordDrivenTestFramework.Entities.TestEntity;
 import KeywordDrivenTestFramework.Reporting.ReportGenerator;
-import KeywordDrivenTestFramework.Utilities.ApplicationConfig;
-import KeywordDrivenTestFramework.Utilities.OtpSmsUtility;
-import KeywordDrivenTestFramework.Utilities.SeleniumDriverUtility;
-import KeywordDrivenTestFramework.Utilities.SikuliDriverUtility;
+import KeywordDrivenTestFramework.Utilities.*;
 
 import org.joda.time.DateTime;
 import org.joda.time.Duration;
@@ -32,7 +29,6 @@ public class BaseClass {
     public static SeleniumDriverUtility SeleniumDriverInstance;
     public static SikuliDriverUtility SikuliDriverInstance;
     public static OtpSmsUtility otpSms;
-    public static ApplicationConfig appConfig = new ApplicationConfig();
     private DateTime startTime, endTime;
     private Duration testDuration;
     public static String testCaseId;

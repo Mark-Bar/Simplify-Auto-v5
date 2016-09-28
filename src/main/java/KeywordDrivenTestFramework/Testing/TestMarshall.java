@@ -8,12 +8,8 @@ import KeywordDrivenTestFramework.Core.BaseClass;
 import KeywordDrivenTestFramework.Entities.Enums;
 import KeywordDrivenTestFramework.Entities.TestEntity;
 import KeywordDrivenTestFramework.Reporting.ReportGenerator;
-import KeywordDrivenTestFramework.Reporting.TestReportEmailerUtility;
 import KeywordDrivenTestFramework.Testing.TestClasses.*;
-import KeywordDrivenTestFramework.Utilities.ApplicationConfig;
-import KeywordDrivenTestFramework.Utilities.CSVReportUtility;
-import KeywordDrivenTestFramework.Utilities.ExcelReaderUtility;
-import KeywordDrivenTestFramework.Utilities.SeleniumDriverUtility;
+import KeywordDrivenTestFramework.Utilities.*;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -30,12 +26,12 @@ import java.util.logging.Logger;
  *
  * @author Brendan
  */
+
 public class TestMarshall extends BaseClass {
 
     // Handles calling test methods based on test parameters , instantiates Selenium Driver object
     ExcelReaderUtility excelInputReader;
     CSVReportUtility cSVReportUtility;
-    TestReportEmailerUtility reportEmailer;
     PrintStream errorOutputStream;
     PrintStream infoOutputStream;
     private String dateTime;
@@ -47,7 +43,7 @@ public class TestMarshall extends BaseClass {
         cSVReportUtility = new CSVReportUtility(inputFilePath);
         cSVReportUtility.createCSVReportDirectoryAndFile();
         browserType = browserTypeOverride;
-        reportGenerator = new ReportGenerator(inputFilePath, ApplicationConfig.ReportFileDirectory());
+        reportGenerator = new ReportGenerator(inputFilePath, "\\Reports");
         SeleniumDriverInstance = new SeleniumDriverUtility(browserType);
     }
 
@@ -73,7 +69,6 @@ public class TestMarshall extends BaseClass {
                         // A login test starts with a fresh Driver instance
                         case "NavigateToSpree":
                         {
-                            //ensureNewBrowserInstance();
                             EnsureOpenInstance();
                              TC1_class navTest = new TC1_class(testData);
                             reportGenerator.addResult(navTest.executeTest());
@@ -118,8 +113,6 @@ public class TestMarshall extends BaseClass {
         SeleniumDriverInstance.shutDown();
 
         reportGenerator.generateTestReport();
-        reportEmailer = new TestReportEmailerUtility(reportGenerator.testResults);
-        reportEmailer.SendResultsEmail();
 
         this.flushOutputStreams();
 
@@ -129,7 +122,7 @@ public class TestMarshall extends BaseClass {
         return excelInputReader.getTestDataFromExcelFile(inputFilePath);
     }
 
-    public static void CheckBrowserExists() {
+    public void CheckBrowserExists() {
         if (SeleniumDriverInstance == null) {
             SeleniumDriverInstance = new SeleniumDriverUtility(browserType);
             try {
@@ -140,7 +133,7 @@ public class TestMarshall extends BaseClass {
         }
     }
 
-    public static void ensureNewBrowserInstance() {
+    public void ensureNewBrowserInstance() {
         if (SeleniumDriverInstance.isDriverRunning()) {
             SeleniumDriverInstance.shutDown();
         }
@@ -150,7 +143,8 @@ public class TestMarshall extends BaseClass {
             Logger.getLogger(TestMarshall.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-    public static void EnsureOpenInstance() {
+
+    public void EnsureOpenInstance() {
         try {
             SeleniumDriverInstance.startDriver();
         } catch (MalformedURLException ex) {
@@ -166,9 +160,9 @@ public class TestMarshall extends BaseClass {
     }
 
     public void generateReportDirectory() {
-        reportDirectory = ApplicationConfig.ReportFileDirectory() + "\\" + resolveScenarioName() + "_" + this.generateDateTimeString();
+        reportDirectory = "Reports" + "\\" + resolveScenarioName() + "_" + this.generateDateTimeString();
         String[] reportsFolderPathSplit = TestMarshall.reportDirectory.split("\\\\");
-        TestMarshall.currentTestDirectory = ApplicationConfig.ReportFileDirectory() + "\\" + reportsFolderPathSplit[reportsFolderPathSplit.length - 1];
+        TestMarshall.currentTestDirectory = "Reports" + "\\" + reportsFolderPathSplit[reportsFolderPathSplit.length - 1];
     }
 
     public void redirectOutputStreams() {

@@ -45,30 +45,6 @@ public class SikuliDriverUtility extends BaseClass
 
     }
     
-    public boolean openSeeTest()
-    {
-        try
-        {
-            Desktop = new Screen();
-            
-            String seeTestExecutablePath = ApplicationConfig.SeeTestExecutablePath();
-            this.seeTestManual = Runtime.getRuntime().exec(seeTestExecutablePath);
-            
-            if(!this.WaitForElementToAppear("SeeTestManualWindowTitle.PNG"))
-            {
-                System.err.println("Error opening application - SeeTestManual - could not verify dialog window title");
-                return false;
-            }
-            
-            return true;
-        }
-        catch(Exception e)
-        {
-            System.err.println("Error opening application - SeeTestManual - please make sure that the application is installed and that the path is correclty set in the appConfig " + e.getMessage());
-            return false;
-        }
-    }
-    
     
     public boolean openDevice(String deviceListingRow, String deviceWindowTitle)
     {
@@ -286,7 +262,7 @@ public class SikuliDriverUtility extends BaseClass
     {
         try
         {
-            this.Desktop.wait(this.ScreenshotDirectory + ImageFilePath, ApplicationConfig.WaitTimeout()).highlight(1);
+            this.Desktop.wait(this.ScreenshotDirectory + ImageFilePath, 15).highlight(1);
     
             return true;
         }
@@ -416,7 +392,7 @@ public class SikuliDriverUtility extends BaseClass
     {
         try
         {
-            Region anchorPointRegion = this.Desktop.wait(this.ScreenshotDirectory + anchorPoint, ApplicationConfig.WaitTimeout()).highlight(1);
+            Region anchorPointRegion = this.Desktop.wait(this.ScreenshotDirectory + anchorPoint, 15).highlight(1);
             
             if(anchorPointRegion == null)
                 return false;
@@ -458,7 +434,7 @@ public class SikuliDriverUtility extends BaseClass
     
     public boolean WaitForElementToAppearThrowsNoError(String ImageFilePath) {
         try {
-            this.Desktop.wait(this.ScreenshotDirectory + ImageFilePath, ApplicationConfig.WaitTimeout()).highlight(1);
+            this.Desktop.wait(this.ScreenshotDirectory + ImageFilePath, 15).highlight(1);
 
             return true;
         } catch (Exception e) {

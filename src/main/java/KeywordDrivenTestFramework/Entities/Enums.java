@@ -10,7 +10,7 @@ package KeywordDrivenTestFramework.Entities;
 public class Enums
 {
     public enum BrowserType {
-        IE, FireFox, Chrome, Safari
+        IE, FireFox, Chrome, Safari, Headless
     }
 
     public enum ResultStatus
@@ -59,16 +59,6 @@ public class Enums
        
                 
     }
-    
-    
-    public static Environment resolveTestEnvironment(String environment)
-    {
-        switch (environment.toUpperCase()) {
-            case "SPREE":
-                return Environment.Spree;
-            
-            default:
-                return Environment.Spree;
-        }
-    }
+
+
 }

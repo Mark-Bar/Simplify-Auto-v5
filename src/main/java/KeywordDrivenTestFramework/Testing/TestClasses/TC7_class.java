@@ -34,7 +34,7 @@ public class TC7_class extends BaseClass {
     public TestResult executeTest() {
 
         this.setStartTime();
-        if (!SnapCan()) {
+        if (!SnapScan()) {
             SeleniumDriverInstance.takeScreenShot(counter + " - Failed to View cart", true);
             counter++;
             return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to View cart", this.getTotalExecutionTime());//, SeleniumDriverInstance.errorScreenshotPath);
@@ -43,7 +43,7 @@ public class TC7_class extends BaseClass {
         return new TestResult(testData, Enums.ResultStatus.PASS, "Successfully View cart", this.getTotalExecutionTime());//, SeleniumDriverInstance.errorScreenshotPath);
     }
 
-    public boolean SnapCan() {
+    public boolean SnapScan() {
         TC2_class TestCase2 = new TC2_class();
         if (!TestCase2.SelectCategory()) {
             return false;

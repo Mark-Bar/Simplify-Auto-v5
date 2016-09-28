@@ -42,19 +42,14 @@ public class TC2_class extends BaseClass {
         if (!SelectCategory()) {
             SeleniumDriverInstance.takeScreenShot(counter + " - Failed to navigate to Scheduler Downloads page", true);
             counter++;
-            return new TestResult(testData, Enums.ResultStatus.FAIL, " Failed tonavigate to Scheduler Downloads page", this.getTotalExecutionTime());
+            return new TestResult(testData, Enums.ResultStatus.FAIL, " Failed to navigate to Scheduler Downloads page", this.getTotalExecutionTime());
         }
 
         return new TestResult(testData, Enums.ResultStatus.PASS, "Successfully add item to cart", this.getTotalExecutionTime());// SeleniumDriverInstance.errorScreenshotPath);
     }
 
     public boolean CloseNewLetter() {
-        if (!browserType.equals(Enums.BrowserType.IE)) {
-            if (!SeleniumDriverInstance.clickElementbyXpath(Main_Object.CloseNewLetter())) {
-                return false;
-            }
-        }
-        return true;
+        return SeleniumDriverInstance.clickElementbyXpath(Main_Object.CloseNewLetter());
     }
 
     public boolean SelectCategory() {

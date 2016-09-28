@@ -1,0 +1,16 @@
+Executing test - NavigateToSpree
+Continuing to next test method
+Executing test - AddItemToCart
+[INFO] Clicking element by Xpath : //*[@alt='X']
+[INFO] Waiting For Element by Xpath : //*[@alt='X']
+[INFO] Waiting For Element by Xpath : //*[@id='menu']/ul/li/a[text()='NEW']
+[INFO] Waiting For Element by Xpath : //*[@class='menu_item parent new']//ul//ul[@data-menu='WOMEN']/li/a[text()='Clothing']
+[INFO] Clicking element by Xpath : //*[@class='menu_item parent new']//ul//ul[@data-menu='WOMEN']/li/a[text()='Clothing']
+[INFO] Waiting For Element by Xpath : //*[@class='menu_item parent new']//ul//ul[@data-menu='WOMEN']/li/a[text()='Clothing']
+[INFO] Waiting For Element by Xpath : //*[@class='block-content filter']/dl/dd/ol/li[4]/a[text()='Activewear']
+[INFO] Clicking element by Xpath : //*[@class='block-content filter']/dl/dd/ol/li[4]/a[text()='Activewear']
+[INFO] Waiting For Element by Xpath : //*[@class='block-content filter']/dl/dd/ol/li[4]/a[text()='Activewear']
+[INFO] Waiting For Element by Xpath : //*[text()='Footwear']
+[INFO] Clicking element by Xpath : //*[text()='Footwear']
+[INFO] Waiting For Element by Xpath : //*[text()='Footwear']
+[INFO] Waiting For Element by Xpath : //*[text()='Nike Recreation White']

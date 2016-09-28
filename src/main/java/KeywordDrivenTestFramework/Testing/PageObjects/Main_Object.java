@@ -12,7 +12,7 @@ import KeywordDrivenTestFramework.Core.BaseClass;
  * @author Abongile Bonga Maso
  */
 public class Main_Object extends BaseClass {
-
+    public static String PageTitle = "Spree.co.za – online fashion shop for women, men and kids.";
     public static String NavigateToSpreeUrl() {
         return currentEnvironment.SpreeURL;
     }
