@@ -13,12 +13,13 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.Point;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriverService;
-import org.openqa.selenium.remote.BrowserType;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -63,7 +64,7 @@ public class SeleniumDriverUtility extends BaseClass {
     private static Integer screenShotFolderCounter = 1;
     public static final String USERNAME = "spree3";
     public static final String AUTOMATE_KEY = "coFkpCcqaYrspUvJTdoM";
-    public static final String URL = "https://" + USERNAME + ":" + AUTOMATE_KEY + "@hub-cloud.browserstack.com/wd/hub";
+    public static final String Path = "C:\\Users\\Mark.Barfoot\\Desktop\\qa-master\\chromedriver.exe";
     public static DesiredCapabilities caps = new DesiredCapabilities();
 
     public SeleniumDriverUtility(Enums.BrowserType selectedBrowser) {
@@ -102,6 +103,74 @@ public class SeleniumDriverUtility extends BaseClass {
         }
     }
 
+//    public void startDriverLocally() throws MalformedURLException, InterruptedException
+//    {
+//
+//        System.setProperty("webdriver.chrome.driver", this.browserDriverFile.getAbsolutePath());
+//
+//        switch(platform)
+//        {
+//            //Run on browsers that are supported by Windows
+//            case Windows:
+//                switch (browser)
+//                {
+//                    case IE:
+//                        Driver = new InternetExplorerDriver();
+//                        _isDriverRunning = true;
+//                        break;
+//                    case Chrome:
+//                        Driver = new ChromeDriver();
+//                        _isDriverRunning = true;
+//                        break;
+//                    case Edge:
+//                        break;
+//                    case Firefox:
+//                        break;
+//                    case Opera:
+//                        selectAndTestOnBrowser(BrowserTypes.Opera);
+//                        break;
+//                    case Headless:
+//                        break;
+//                    default:
+//                        System.out.println("Browser not supported in the " + Platform.WINDOWS.toString() + " patform.");
+//                }
+//                break;
+//
+//            //Run on browsers that are supported by MAC
+//            case OS_X:
+//                switch (browser)
+//                {
+//                    case Firefox:
+//                        break;
+//                    case Chrome:
+//                        Driver = new ChromeDriver();
+//                        _isDriverRunning = true;
+//                        break;
+//                    case Safari:
+//                        break;
+//                    case Opera:
+//                        break;
+//                    case Headless:
+//                        break;
+//                    default:
+//                        System.out.println("Browser not supported in the " + Platform.MAC.toString() + " patform.");
+//                }
+//                break;
+//            default:
+//                System.out.println("Platform not supported in the framework.");
+//        }
+//
+//        Driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+//        Driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
+//        Driver.manage().timeouts().setScriptTimeout(1, TimeUnit.SECONDS);
+//        Driver.manage().window().maximize();
+//        Driver.manage().window().maximize();
+//
+//        session = ((ChromeDriver)Driver).getSessionId();
+//        System.out.println("Browserstack session created: " + SeleniumDriverUtility.session.toString());
+//
+//    }
+
     public void startDriver() throws MalformedURLException {
         System.setProperty("org.apache.commons.logging.Log", "org.apache.commons.logging.impl.Jdk14Logger");
 
@@ -123,16 +192,20 @@ public class SeleniumDriverUtility extends BaseClass {
                 firefoxcaps.setCapability("os", "Windows");
                 firefoxcaps.setCapability("os_version", "7");
                 firefoxcaps.setCapability("resolution", "1024x768");
+                firefoxcaps.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
                 caps = firefoxcaps;
                 _isDriverRunning = true;
                 break;
             case Chrome:
+                Driver = new ChromeDriver();
                 DesiredCapabilities chromecaps = new DesiredCapabilities();
                 chromecaps.setCapability("browser", "Chrome");
                 chromecaps.setCapability("browser_version", "52.0");
                 chromecaps.setCapability("os", "Windows");
                 chromecaps.setCapability("os_version", "7");
                 chromecaps.setCapability("resolution", "1024x768");
+                Driver.manage().window().maximize();
+                chromecaps.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
                 caps = chromecaps;
                 _isDriverRunning = true;
                 break;
@@ -150,17 +223,33 @@ public class SeleniumDriverUtility extends BaseClass {
                 DesiredCapabilities Headlesscaps = new DesiredCapabilities();
                 Headlesscaps.setCapability("takesScreenshot", true);
                 Headlesscaps.setCapability(PhantomJSDriverService.PHANTOMJS_EXECUTABLE_PATH_PROPERTY, "src\\main\\resources\\phantomjs.exe");
-                Headlesscaps.setCapability("phantomjs.page.settings.userAgent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.60 Safari/537.17");
+                Headlesscaps.setCapability("phantomjs.page.settings.userAgent", "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.60 Safari/537.17"); //Chrome/37.0.2062.120 Safari/537.36 Chrome/24.0.1312.60 Safari/537.17
+                //Headlesscaps.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+                Headlesscaps.setJavascriptEnabled(true);
+                Headlesscaps.setCapability(PhantomJSDriverService.PHANTOMJS_CLI_ARGS, new String[]{"--web-security=no", "--ignore-ssl-errors=yes"});
+                Headlesscaps.setJavascriptEnabled(true);
                 caps = Headlesscaps;
                 _isDriverRunning = true;
                 break;
+
+            case ChromeProxy:
+                String PROXY = "http://ppprox.24.com:8080";
+
+                org.openqa.selenium.Proxy proxy = new org.openqa.selenium.Proxy();
+                proxy.setHttpProxy(PROXY)
+                        .setFtpProxy(PROXY)
+                        .setSslProxy(PROXY);
+                DesiredCapabilities cap = new DesiredCapabilities();
+                cap.setCapability(CapabilityType.PROXY, proxy);
+
+                WebDriver Driver = new ChromeDriver(cap);
         }
         if (browserType == Headless)
         {
             Driver = new PhantomJSDriver(caps);
             retrievedTestValues = new RetrievedTestValues();
         } else {
-            Driver = new RemoteWebDriver(new URL(URL), caps);
+            Driver = new RemoteWebDriver(new URL(Path), caps);
             retrievedTestValues = new RetrievedTestValues();
         }
     }
@@ -168,6 +257,8 @@ public class SeleniumDriverUtility extends BaseClass {
     public void maximizeWindow() {
         Driver.manage().window().maximize();
     }
+
+    public boolean SSLCertificate(){Driver.navigate ().to ("javascript:document.getElementById('overridelink').click()"); return true;}
 
     public boolean clickElementById(String elementId) {
         try {
@@ -310,6 +401,26 @@ public class SeleniumDriverUtility extends BaseClass {
             return false;
         }
     }
+
+    public boolean switchToFrameByClass(String elementName) {
+        int waitCount = 0;
+        try {
+            while (waitCount < 15) {
+                try {
+                    Driver.switchTo().frame(elementName);
+                    return true;
+                } catch (Exception e) {
+                    waitCount++;
+                }
+            }
+            return false;
+        } catch (Exception e) {
+            System.err.println("Error switching to frame by Name - " + e.getMessage());
+            this.DriverExceptionDetail = e.getMessage();
+            return false;
+        }
+    }
+
 
     public boolean switchToLastDuplicateFrameById(String elementId) {
         int waitCount = 0;
@@ -532,6 +643,20 @@ public class SeleniumDriverUtility extends BaseClass {
         try {
             this.waitForElementByLinkText(elementLinkText);
             WebElement elementToRead = Driver.findElement(By.linkText(elementLinkText));
+            retrievedText = elementToRead.getText();
+            return retrievedText;
+        } catch (Exception e) {
+            System.err.println("Error reading text from element - " + elementLinkText + " error - " + e.getMessage());
+            this.DriverExceptionDetail = e.getMessage();
+            return retrievedText;
+        }
+    }
+
+    public String findElementsByID(String elementLinkText) {
+        String retrievedText = "";
+        try {
+            this.waitForElementByLinkText(elementLinkText);
+            WebElement elementToRead = Driver.findElement(By.id(elementLinkText));
             retrievedText = elementToRead.getText();
             return retrievedText;
         } catch (Exception e) {
@@ -3162,6 +3287,36 @@ public class SeleniumDriverUtility extends BaseClass {
         }
     }
 
+    public boolean enterTextByTmce() {
+        try {
+           JavascriptExecutor jsx = (JavascriptExecutor)Driver;
+           jsx.executeScript("tinymce.activeEditor.execCommand('mceInsertContent', false, 'This is test data used to populate tinymce instances for automation testing purposes')");
+
+            return true;
+
+        } catch (Exception e) {
+            System.err.println("Error entering text -" + e.getMessage());
+            this.DriverExceptionDetail = e.getMessage();
+            return false;
+        }
+    }
+
+    public boolean clickSave() {
+        try {
+            JavascriptExecutor jsx = (JavascriptExecutor)Driver;
+       jsx.executeScript("document.getElementById('vacancy-save-and-continue').click();");
+
+            return true;
+
+        } catch (Exception e) {
+            System.err.println("Error entering text -" + e.getMessage());
+            this.DriverExceptionDetail = e.getMessage();
+            return false;
+        }
+    }
+
+
+
     public boolean EnterTextByXpath(String elementXpath, String textToEnter) {
         try {
             this.waitForElementByXpath(elementXpath, 5);
@@ -3399,6 +3554,39 @@ public class SeleniumDriverUtility extends BaseClass {
             this.DriverExceptionDetail = e.getMessage();
             return false;
         }
+    }
+
+    public void navigateToTest(String pageUrl) {
+        Driver.navigate().to(pageUrl);
+
+    }
+
+    public boolean navigateBack() {
+        try {
+            Driver.navigate().back();
+
+            return true;
+        } catch (Exception e) {
+            System.err.println("Error navigating to URL - " + e.getMessage());
+            this.DriverExceptionDetail = e.getMessage();
+            return false;
+        }
+    }
+
+    public boolean enterPressTags() {
+
+        Driver.findElement(By.id("tagName")).sendKeys(Keys.RETURN);
+
+            return true;
+
+    }
+
+    public boolean enterPressSkills() {
+
+        Driver.findElement(By.xpath("/html/body/div[1]/div[3]/div[5]/div[1]/div[1]/div/div/div[2]/div/div[1]/div[20]/div/span/div[2]/input")).sendKeys(Keys.RETURN);
+
+        return true;
+
     }
 
     public String getUrl() {
@@ -3864,7 +4052,7 @@ public class SeleniumDriverUtility extends BaseClass {
                 } catch (Exception e) {
                     elementFound = false;
                 }
-                //Thread.sleep(500);
+                Thread.sleep(500);
                 waitCount++;
             }
 
@@ -4101,6 +4289,7 @@ public class SeleniumDriverUtility extends BaseClass {
         String imageFilePathString = "";
 
         try {
+
             StringBuilder imageFilePathBuilder = new StringBuilder();
             // add date time folder and test case id folder
             imageFilePathBuilder.append(reportDirectory).append("\\");
@@ -10650,6 +10839,8 @@ public class SeleniumDriverUtility extends BaseClass {
         return true;
     }
 
+
+
     // Switch Tabs
     // @gjansen
     public boolean pressControlTab() {
@@ -11217,5 +11408,18 @@ public class SeleniumDriverUtility extends BaseClass {
 
         return IsDisabled;
     }
+
+
+    public boolean WaitAndClick ()
+    {
+        //To wait for element visible
+        WebDriverWait wait = new WebDriverWait(Driver, 15);
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"vacancy-save-and-continue\"]"))); //*[@id="vacancy-save-and-continue"]
+
+        Driver.findElement(By.xpath("//*[@id=\"vacancy-save-and-continue\"]")).click();
+        return true;
+
+    }
+
 
 }

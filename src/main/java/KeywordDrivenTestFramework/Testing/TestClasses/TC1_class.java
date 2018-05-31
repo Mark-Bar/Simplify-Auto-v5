@@ -27,30 +27,26 @@ public class TC1_class extends BaseClass {
     public TestResult executeTest() {
 
         this.setStartTime();
-        if (!OpenSpreeWebSite()) {
-            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to navigate to Spree", true);
+        if (!OpenCareers24SAWebSite()) {
+            SeleniumDriverInstance.takeScreenShot(counter + " - Failed to navigate to Careers", true);
             counter++;
-            return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to navigate to Spree", this.getTotalExecutionTime());// SeleniumDriverInstance.errorScreenshotPath);
+            return new TestResult(testData, Enums.ResultStatus.FAIL, "Failed to navigate to Careers", this.getTotalExecutionTime());// SeleniumDriverInstance.errorScreenshotPath);
         }
 
-        return new TestResult(testData, Enums.ResultStatus.PASS, "Successfully navigate to Spree", this.getTotalExecutionTime());// SeleniumDriverInstance.errorScreenshotPath);
+        return new TestResult(testData, Enums.ResultStatus.PASS, "Successfully navigate to Careers MARK IS GHHEEIIIIIII", this.getTotalExecutionTime());// SeleniumDriverInstance.errorScreenshotPath);
     }
 
-    //navigate to spree
-    public boolean OpenSpreeWebSite() {
-        if (!SeleniumDriverInstance.navigateTo(Main_Object.NavigateToSpreeUrl())) {
-            return true;
+    //navigate to careers24
+    public boolean OpenCareers24SAWebSite() {
+        if (!SeleniumDriverInstance.navigateTo(Main_Object.NavigateToCareers24SAUrl())) {
+            return false;
         }
-        if (SeleniumDriverUtility.Driver.getTitle().equals(Main_Object.PageTitle)) {
-            return true;
+        SeleniumDriverInstance.takeScreenShot("Test", false);
+
+        if (!SeleniumDriverUtility.Driver.getTitle().equals(Main_Object.PageTitle)) {
+            return false;
         }
-        if (!browserType.equals(Enums.BrowserType.IE)) {
-            //waite for news letter pop.
-            if (!SeleniumDriverInstance.waitForElementByXpath(Main_Object.NewsletterImage())) {
-                return false;
-            }
-        }
-        SeleniumDriverInstance.takeScreenShot("Successfully navigate to Spree", false);
+
         return true;
     }
 }

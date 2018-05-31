@@ -23,12 +23,12 @@ public class MainTest extends BaseClass{
     private static TestMarshall instance;
 
     public MainTest() {
-        currentEnvironment = Enums.Environment.Spree;
+        currentEnvironment = Enums.Environment.Careers24;
     }
 
     @Test
     public void RunSpree() throws Exception {
-        System.out.println("Spree Test Cases");
+        System.out.println("Careers24 Test Cases");
         instance = new TestMarshall("src\\test\\resources\\TestPack.xlsx", Enums.BrowserType.Chrome);
         instance.runKeywordDrivenTests();
     }

@@ -10,7 +10,7 @@ package KeywordDrivenTestFramework.Entities;
 public class Enums
 {
     public enum BrowserType {
-        IE, FireFox, Chrome, Safari, Headless
+        IE, FireFox, Chrome, Safari, ChromeProxy, Headless
     }
 
     public enum ResultStatus
@@ -34,15 +34,15 @@ public class Enums
         
         // DEV[FirstPageURL,FirstDatabaseConnectionString]
         
-        Spree("http://stage.spreeza.net/");
+        Careers24("http://www.careers24.com");
         
         
         
         // For each system (website1, database1, website2 etc.) within the defined environment (Dev, QA, Prod etc.)
         // you will have to declare the appropriate string to store its properties (URL or connection string etc.).
         
-        public final String SpreeURL;
-        
+        public final String Careers24URL;
+        public final String SimplifyURL;
         
         
         
@@ -53,8 +53,8 @@ public class Enums
         Environment(String pageUrl)
         {
             
-            this.SpreeURL = pageUrl;
-            
+            this.Careers24URL = pageUrl;
+            this.SimplifyURL = pageUrl;
         }
        
                 
